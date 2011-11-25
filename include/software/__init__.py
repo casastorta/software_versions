@@ -1,0 +1,66 @@
+#!/usr/bin/env python
+
+'''
+``com.nimium.util.software`` module contains functionality to parse out
+log files from Nimium's own Collector scripts (monthly maintenance reports)
+'''
+
+STABLE_SENDMAIL_URL = "http://www.sendmail.com/sm/open_source/download/"
+STABLE_SENDMAIL_PATTERN = \
+    'Sendmail.*<a href="/sm/open_source/download/(.*)">.*</a> is available from'
+
+STABLE_BIND_URL = "http://www.isc.org/software/bind"
+STABLE_BIND_PATTERN = \
+    '<a href="/software/bind/.*" title="BIND (.*)".*</a>'
+
+STABLE_CYRUS_IMAP_URL = "http://www.cyrusimap.org/"
+STABLE_CYRUS_IMAP_PATTERN = \
+    '<p>Version: (.*?)</p>'
+
+STABLE_APACHE_URL = "http://httpd.apache.org/download.cgi"
+STABLE_APACHE_PATTERN = \
+    'Apache HTTP Server \(httpd\)(.*?) is the best available version'
+
+STABLE_SQUID_URL = "http://www.squid-cache.org/Versions/"
+STABLE_SQUID_PATTERN = \
+    '<th>First Production Release Date</th>.*?<th>Latest Release</th>.*?' \
+    '<th>Latest Release Date</th>.*?</tr>.*?<tr>.*?<td>' \
+    '<a href=".*?">.*?</a></td>.*?<td>.*?</td>.*?<td>(.*?)</td>'
+
+STABLE_CANIT_URL = "http://roaringpenguin.com/news"
+STABLE_CANIT_PATTERN = \
+    '<a href.*?>CanIt (.*?) Released'
+#    'CanIt (.*?) Released'
+
+STABLE_PSQL_URL = "http://www.postgresql.org/versions.rss"
+STABLE_PSQL_PATTERN = \
+    '            <title>(.*?)</title>'
+    
+STABLE_SQUIRRELMAIL_URL = "http://squirrelmail.org/download.php"
+STABLE_SQUIRRELMAIL_PATTERN = \
+    '<b>Stable version</b>.*?<b>Version: (.*?)</b><br />'
+    
+STABLE_OPENLDAP_URL = "http://www.openldap.org/software/download/"
+STABLE_OPENLDAP_PATTERN = \
+    'Our latest release.*?of OpenLDAP Software for general use.*?OpenLDAP-' \
+    '(.*?) is currently available'
+    
+STABLE_PLA_URL = "http://phpldapadmin.sourceforge.net/wiki/index.php/Release"
+STABLE_PLA_PATTERN = \
+    '<span class="mw-headline" id="phpLDAPadmin_.*?">' \
+    'phpLDAPadmin (.*?)</span></h1>'
+
+STABLE_POSTFIX_URL = "http://cdn.postfix.johnriley.me/mirrors/postfix-release/"
+STABLE_POSTFIX_PATTERN = \
+    '<a href="official/postfix-(.*?).tar.gz">Source code</a>'
+
+
+__all__ = [
+    "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
+    "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
+    "STABLE_CYRUS_IMAP_URL", "STABLE_CYRUS_IMAP_PATTERN"
+    "STABLE_APACHE_URL", "STABLE_APACHE_PATTERN"
+    "STABLE_SQUID_URL", "STABLE_SQUID_PATTERN"
+    "STABLE_CANIT_URL", "STABLE_CANIT_PATTERN"
+]
+
