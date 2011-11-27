@@ -1,8 +1,8 @@
 #!/usr/bin/env python
 
 '''
-``com.nimium.util.software`` module contains functionality to parse out
-log files from Nimium's own Collector scripts (monthly maintenance reports)
+``software`` module contains functionality to parse out
+latest software versions from respective vendors' web sites.
 '''
 
 STABLE_SENDMAIL_URL = "http://www.sendmail.com/sm/open_source/download/"
