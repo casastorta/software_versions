@@ -139,14 +139,15 @@ def __grep_out_info(url, pattern, match_number=1, recursive=False):
 
         if (type(m) is not NoneType):
             return [ str(m.group(match_number)).strip() ]
-        
+
         else:
             print ("***WARN*** Can't locate %s in %s for software version" % \
                 (pattern, url))
-            
+
             return False
     else:
         # We should do recursive
+
         parts = re.split('\n', content)
         list = []
 

@@ -34,17 +34,18 @@ STABLE_CANIT_PATTERN = \
 
 STABLE_PSQL_URL = "http://www.postgresql.org/versions.rss"
 STABLE_PSQL_PATTERN = \
-    '            <title>(.*?)</title>'
-    
+    '<item><title>(.*?)(\<\/|$)'
+    #<item><title>X.X.X(</ or end-of-line)
+
 STABLE_SQUIRRELMAIL_URL = "http://squirrelmail.org/download.php"
 STABLE_SQUIRRELMAIL_PATTERN = \
     '<b>Stable version</b>.*?<b>Version: (.*?)</b><br />'
-    
+
 STABLE_OPENLDAP_URL = "http://www.openldap.org/software/download/"
 STABLE_OPENLDAP_PATTERN = \
     'Our latest release.*?of OpenLDAP Software for general use.*?OpenLDAP-' \
     '(.*?) is currently available'
-    
+
 STABLE_PLA_URL = "http://phpldapadmin.sourceforge.net/wiki/index.php/Release"
 STABLE_PLA_PATTERN = \
     '<span class="mw-headline" id="phpLDAPadmin_.*?">' \
