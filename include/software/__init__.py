@@ -23,9 +23,9 @@ STABLE_APACHE_PATTERN = \
 
 STABLE_SQUID_URL = "http://www.squid-cache.org/Versions/"
 STABLE_SQUID_PATTERN = \
-    '<th>First Production Release Date</th>.*?<th>Latest Release</th>.*?' \
-    '<th>Latest Release Date</th>.*?</tr>.*?<tr>.*?<td>' \
-    '<a href=".*?">.*?</a></td>.*?<td>.*?</td>.*?<td>(.*?)</td>'
+    '<tr><td><a href=".*?">.*?</a></td><td>.*?</td><td>(.*?)</td></tr>' \
+    '<tr><td><a href=".*?">.*?</a></td><td>.*?</td><td>(.*?)</td></tr>' \
+    '<tr><td>'
 
 STABLE_CANIT_URL = "http://roaringpenguin.com/news"
 STABLE_CANIT_PATTERN = \
