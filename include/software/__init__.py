@@ -19,7 +19,7 @@ STABLE_CYRUS_IMAP_PATTERN = \
 
 STABLE_APACHE_URL = "http://httpd.apache.org/download.cgi"
 STABLE_APACHE_PATTERN = \
-    'Apache HTTP Server \(httpd\)(.*?) is the best available version'
+    '\<strong\>Apache HTTP Server (.*?) \(httpd\)\:'
 
 STABLE_SQUID_URL = "http://www.squid-cache.org/Versions/"
 STABLE_SQUID_PATTERN = \
@@ -30,12 +30,10 @@ STABLE_SQUID_PATTERN = \
 STABLE_CANIT_URL = "http://roaringpenguin.com/news"
 STABLE_CANIT_PATTERN = \
     '<a href.*?>CanIt (.*?) '
-#    'CanIt (.*?) Released'
 
 STABLE_PSQL_URL = "http://www.postgresql.org/versions.rss"
 STABLE_PSQL_PATTERN = \
     '<item><title>(.*?)(\<\/|$)'
-    #<item><title>X.X.X(</ or end-of-line)
 
 STABLE_SQUIRRELMAIL_URL = "http://squirrelmail.org/download.php"
 STABLE_SQUIRRELMAIL_PATTERN = \
@@ -55,18 +53,22 @@ STABLE_POSTFIX_URL = "http://cdn.postfix.johnriley.me/mirrors/postfix-release/"
 STABLE_POSTFIX_PATTERN = \
     '<a href="official/postfix-(.*?).tar.gz">Source code</a>'
 
+STABLE_NGINX_URL = "http://nginx.org/en/download.html";
+STABLE_NGINX_PATTERN = \
+    'Stable version</h4>.*?<a href="/download/nginx-(.*?).tar.gz">'
 
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
-    "STABLE_CYRUS_IMAP_URL", "STABLE_CYRUS_IMAP_PATTERN"
-    "STABLE_APACHE_URL", "STABLE_APACHE_PATTERN"
-    "STABLE_SQUID_URL", "STABLE_SQUID_PATTERN"
-    "STABLE_CANIT_URL", "STABLE_CANIT_PATTERN"
-    "STABLE_PSQL_URL", "STABLE_PSQL_PATTERN"
-    "STABLE_SQUIRRELMAIL_URL", "STABLE_SQUIRRELMAIL_PATTERN"
-    "STABLE_OPENLDAP_URL", "STABLE_OPENLDAP_PATTERN"
-    "STABLE_PLA_URL", "STABLE_PLA_PATTERN"
-    "STABLE_POSTFIX_URL", "STABLE_POSTFIX_PATTERN"
+    "STABLE_CYRUS_IMAP_URL", "STABLE_CYRUS_IMAP_PATTERN",
+    "STABLE_APACHE_URL", "STABLE_APACHE_PATTERN",
+    "STABLE_SQUID_URL", "STABLE_SQUID_PATTERN",
+    "STABLE_CANIT_URL", "STABLE_CANIT_PATTERN",
+    "STABLE_PSQL_URL", "STABLE_PSQL_PATTERN",
+    "STABLE_SQUIRRELMAIL_URL", "STABLE_SQUIRRELMAIL_PATTERN",
+    "STABLE_OPENLDAP_URL", "STABLE_OPENLDAP_PATTERN",
+    "STABLE_PLA_URL", "STABLE_PLA_PATTERN",
+    "STABLE_POSTFIX_URL", "STABLE_POSTFIX_PATTERN",
+    "STABLE_NGINX_URL", "STABLE_NGINX_PATTERN"
 ]
 

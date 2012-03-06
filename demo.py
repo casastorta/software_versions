@@ -23,7 +23,7 @@ def main():
     print ("OpenLDAP:    %s" % (ver.check_openldap()))
     print ("PLA:         %s" % (ver.check_phpldapadmin()))
     print ("Postfix:     %s" % (ver.check_postfix()))
-
+    print ("Nginx:       %s" % (ver.check_nginx()))
 
 def set_include_path():
     include_path = os.path.abspath("./include/")

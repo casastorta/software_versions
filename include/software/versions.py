@@ -109,6 +109,16 @@ def check_phpldapadmin():
     return (__grep_out_info(url, pattern))
 
 
+def check_nginx():
+    '''
+    Checks Nginx stable version(s) from the website
+    '''
+    url = sftw.STABLE_NGINX_URL
+    pattern = sftw.STABLE_NGINX_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def check_postfix():
     '''
     Checks Postfix MTA stable version(s) from the website
