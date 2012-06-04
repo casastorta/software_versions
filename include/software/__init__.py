@@ -53,7 +53,7 @@ STABLE_POSTFIX_URL = "http://cdn.postfix.johnriley.me/mirrors/postfix-release/"
 STABLE_POSTFIX_PATTERN = \
     '<a href="official/postfix-(.*?).tar.gz">Source code</a>'
 
-STABLE_NGINX_URL = "http://nginx.org/en/download.html";
+STABLE_NGINX_URL = "http://nginx.org/en/download.html"
 STABLE_NGINX_PATTERN = \
     'Stable version</h4>.*?<a href="/download/nginx-(.*?).tar.gz">'
 
