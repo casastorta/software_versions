@@ -7,7 +7,8 @@ latest software versions from respective vendors' web sites.
 
 STABLE_SENDMAIL_URL = "http://www.sendmail.com/sm/open_source/download/"
 STABLE_SENDMAIL_PATTERN = \
-    'Sendmail.*<a href="/sm/open_source/download/(.*)">.*</a> is available from'
+    'Sendmail.*<a href="/sm/open_source/download/(.*)">.*</a> is ' \
+    'available from'
 
 STABLE_BIND_URL = "http://www.isc.org/software/bind"
 STABLE_BIND_PATTERN = \
@@ -19,7 +20,7 @@ STABLE_CYRUS_IMAP_PATTERN = \
 
 STABLE_APACHE_URL = "http://httpd.apache.org/download.cgi"
 STABLE_APACHE_PATTERN = \
-    '\<strong\>Apache HTTP Server (.*?) \(httpd\)\:'
+    '\<h1.*?\>Apache HTTP Server (.*?) \(httpd\)\: (.*?) is the latest'
 
 STABLE_SQUID_URL = "http://www.squid-cache.org/Versions/"
 STABLE_SQUID_PATTERN = \
@@ -71,4 +72,3 @@ __all__ = [
     "STABLE_POSTFIX_URL", "STABLE_POSTFIX_PATTERN",
     "STABLE_NGINX_URL", "STABLE_NGINX_PATTERN"
 ]
-
