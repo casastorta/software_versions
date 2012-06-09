@@ -58,6 +58,10 @@ STABLE_NGINX_URL = "http://nginx.org/en/download.html"
 STABLE_NGINX_PATTERN = \
     'Stable version</h4>.*?<a href="/download/nginx-(.*?).tar.gz">'
 
+STABLE_MYSQL_URL = "http://www.mysql.com/downloads/mysql/"
+STABLE_MYSQL_PATTERN = \
+    '<h1>MySQL Community Server (.*?)</h1>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -71,4 +75,5 @@ __all__ = [
     "STABLE_PLA_URL", "STABLE_PLA_PATTERN",
     "STABLE_POSTFIX_URL", "STABLE_POSTFIX_PATTERN",
     "STABLE_NGINX_URL", "STABLE_NGINX_PATTERN"
+    "STABLE_MYSQL_URL", "STABLE_MYSQL_PATTERN"
 ]

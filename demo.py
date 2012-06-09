@@ -24,6 +24,7 @@ def main():
     print ("PLA:         %s" % (ver.check_phpldapadmin()))
     print ("Postfix:     %s" % (ver.check_postfix()))
     print ("Nginx:       %s" % (ver.check_nginx()))
+    print ("MySQL:       %s" % (ver.check_mysql()))
 
 def set_include_path():
     include_path = os.path.abspath("./include/")
