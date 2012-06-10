@@ -66,6 +66,10 @@ STABLE_PROFTPD_URL = "http://www.proftpd.org/"
 STABLE_PROFTPD_PATTERN = \
 		'Stable: <strong>(.*?)</strong>'
 
+STABLE_VSFTPD_URL = "https://security.appspot.com/vsftpd.html"
+STABLE_VSFTPD_PATTERN = \
+		'<li>vsftpd-(.*?) is released'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -81,4 +85,5 @@ __all__ = [
     "STABLE_NGINX_URL", "STABLE_NGINX_PATTERN"
     "STABLE_MYSQL_URL", "STABLE_MYSQL_PATTERN"
     "STABLE_PROFTPD_URL", "STABLE_PROFTPD_PATTERN"
+    "STABLE_VSFTPD_URL", "STABLE_VSFTPD_PATTERN"
 ]

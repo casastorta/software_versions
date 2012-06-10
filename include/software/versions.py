@@ -146,6 +146,15 @@ def check_proftpd():
 
     return (__grep_out_info(url, pattern))
 
+def check_vsftpd():
+    '''
+    Checks vsftpd stable version(s) from the website
+    '''
+    url = sftw.STABLE_VSFTPD_URL
+    pattern = sftw.STABLE_VSFTPD_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
 def __grep_out_info(url, pattern, match_number=1, recursive=False):
     '''
     Does the pull-and-grep part in search for requested info
