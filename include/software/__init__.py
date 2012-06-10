@@ -62,6 +62,10 @@ STABLE_MYSQL_URL = "http://www.mysql.com/downloads/mysql/"
 STABLE_MYSQL_PATTERN = \
     '<h1>MySQL Community Server (.*?)</h1>'
 
+STABLE_PROFTPD_URL = "http://www.proftpd.org/"
+STABLE_PROFTPD_PATTERN = \
+		'Stable: <strong>(.*?)</strong>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -76,4 +80,5 @@ __all__ = [
     "STABLE_POSTFIX_URL", "STABLE_POSTFIX_PATTERN",
     "STABLE_NGINX_URL", "STABLE_NGINX_PATTERN"
     "STABLE_MYSQL_URL", "STABLE_MYSQL_PATTERN"
+    "STABLE_PROFTPD_URL", "STABLE_PROFTPD_PATTERN"
 ]

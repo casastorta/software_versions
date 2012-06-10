@@ -25,6 +25,7 @@ def main():
     print ("Postfix:     %s" % (ver.check_postfix()))
     print ("Nginx:       %s" % (ver.check_nginx()))
     print ("MySQL:       %s" % (ver.check_mysql()))
+    print ("ProFTPD:     %s" % (ver.check_proftpd()))
 
 def set_include_path():
     include_path = os.path.abspath("./include/")
