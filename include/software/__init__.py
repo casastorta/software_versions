@@ -12,7 +12,7 @@ STABLE_SENDMAIL_PATTERN = \
 
 STABLE_BIND_URL = "http://www.isc.org/software/bind"
 STABLE_BIND_PATTERN = \
-    '<a href="/software/bind/.*" title="BIND (.*)".*</a>'
+    '<a href="/software/bind/.*" title="BIND (.*)">.*</a>'
 
 STABLE_CYRUS_IMAP_URL = "http://www.cyrusimap.org/"
 STABLE_CYRUS_IMAP_PATTERN = \
@@ -24,9 +24,7 @@ STABLE_APACHE_PATTERN = \
 
 STABLE_SQUID_URL = "http://www.squid-cache.org/Versions/"
 STABLE_SQUID_PATTERN = \
-    '<tr><td><a href=".*?">.*?</a></td><td>.*?</td><td>(.*?)</td></tr>' \
-    '<tr><td><a href=".*?">.*?</a></td><td>.*?</td><td>(.*?)</td></tr>' \
-    '<tr><td>'
+    '<tr><td><a href=".*?">.*?</a></td><td>.*?</td><td>(.*?)</td></tr>'
 
 STABLE_CANIT_URL = "http://roaringpenguin.com/news"
 STABLE_CANIT_PATTERN = \
