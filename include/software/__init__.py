@@ -64,11 +64,11 @@ STABLE_MYSQL_PATTERN = \
 
 STABLE_PROFTPD_URL = "http://www.proftpd.org/"
 STABLE_PROFTPD_PATTERN = \
-		'Stable: <strong>(.*?)</strong>'
+    'Stable: <strong>(.*?)</strong>'
 
 STABLE_VSFTPD_URL = "https://security.appspot.com/vsftpd.html"
 STABLE_VSFTPD_PATTERN = \
-		'<li>vsftpd-(.*?) is released'
+    '<li>vsftpd-(.*?) is released'
 
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",

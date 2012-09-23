@@ -8,6 +8,7 @@ Scenario:
 import os
 import sys
 
+
 def main():
 
     from software import versions as ver
@@ -28,12 +29,12 @@ def main():
     print ("ProFTPD:     %s" % (ver.check_proftpd()))
     print ("vsftpd:      %s" % (ver.check_vsftpd()))
 
+
 def set_include_path():
     include_path = os.path.abspath("./include/")
-    sys.path.append (include_path)
+    sys.path.append(include_path)
 
 
 if __name__ == "__main__":
     set_include_path()
     main()
-

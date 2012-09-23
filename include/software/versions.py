@@ -9,6 +9,7 @@ import software as sftw
 import re
 import urllib
 
+
 def check_sendmail():
     '''
     Checks sendmail stable version from the website
@@ -128,6 +129,7 @@ def check_postfix():
 
     return (__grep_out_info(url, pattern))
 
+
 def check_mysql():
     '''
     Checks MySQL Community Server stable version(s) from the website
@@ -136,6 +138,7 @@ def check_mysql():
     pattern = sftw.STABLE_MYSQL_PATTERN
 
     return (__grep_out_info(url, pattern))
+
 
 def check_proftpd():
     '''
@@ -146,6 +149,7 @@ def check_proftpd():
 
     return (__grep_out_info(url, pattern))
 
+
 def check_vsftpd():
     '''
     Checks vsftpd stable version(s) from the website
@@ -154,6 +158,7 @@ def check_vsftpd():
     pattern = sftw.STABLE_VSFTPD_PATTERN
 
     return (__grep_out_info(url, pattern))
+
 
 def __grep_out_info(url, pattern, match_number=1, recursive=False):
     '''
@@ -174,7 +179,7 @@ def __grep_out_info(url, pattern, match_number=1, recursive=False):
         m = re.search(pattern, content, re.DOTALL)
 
         if (type(m) is not NoneType):
-            return [ str(m.group(match_number)).strip() ]
+            return [str(m.group(match_number)).strip()]
 
         else:
             print ("***WARN*** Can't locate %s in %s for software version" % \
