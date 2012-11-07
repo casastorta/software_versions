@@ -47,7 +47,7 @@ def check_apache_httpd():
     url = sftw.STABLE_APACHE_URL
     pattern = sftw.STABLE_APACHE_PATTERN
 
-    return (__grep_out_info(url, pattern))
+    return (__grep_out_info(url, pattern, recursive=True))
 
 
 def check_squid():
