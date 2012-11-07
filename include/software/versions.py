@@ -8,6 +8,7 @@ from types import NoneType
 import software as sftw
 import re
 import urllib
+import sys
 
 
 def check_sendmail():
@@ -168,6 +169,8 @@ def __grep_out_info(url, pattern, match_number=1, recursive=False):
     try:
         f = urllib.urlopen(url)
         content = f.read()
+    except KeyboardInterrupt:
+        sys.exit("Break.")
     except:
         print ("***ERR*** Can't pull %s for software version" % (url))
         return False
