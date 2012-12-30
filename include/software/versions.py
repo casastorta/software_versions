@@ -160,6 +160,14 @@ def check_vsftpd():
 
     return (__grep_out_info(url, pattern))
 
+def check_sendmailanalyzer():
+    '''
+    Checks SendmailAnalyzer stable version(s) from the website
+    '''
+    url = sftw.STABLE_SENDMAILANALYZER_URL
+    pattern = sftw.STABLE_SENDMAILANALYZER_PATTERN
+
+    return (__grep_out_info(url, pattern))
 
 def __grep_out_info(url, pattern, match_number=1, recursive=False):
     '''
