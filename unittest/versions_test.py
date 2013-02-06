@@ -4,6 +4,7 @@ import unittest
 
 import sys
 import os
+import re
 
 
 class TestVersionFunctions(unittest.TestCase):
@@ -106,16 +107,19 @@ class TestVersionFunctions(unittest.TestCase):
                         if (len(input_part) < 5):
                             # If it's shorter than 4, it's probably
                             # something like 9.9.1-P3 or 1.3.4b
-                            sys.stdout.write( \
-                                ("\n\t" \
-                                    "Version (%s from %s) seems to " \
-                                    "contain short chars as extended " \
-                                    "version? " % \
-                                    (input_part, value) \
-                                ) \
-                            )
-                            sys.stdout.flush()
-                            input_num = 0
+                            if (re.match('^[A-Za-z0-9_-]*$', input_part)):
+                                sys.stdout.write(
+                                    ("\n\t"
+                                        "Version (%s from %s) seems to "
+                                        "contain short chars as extended "
+                                        "version? " %
+                                        (input_part, value)
+                                    )
+                                )
+                                sys.stdout.flush()
+                                input_num = 0
+                            else:
+                                input_num = -1
                         elif (input_part.find('-ESV-') > -1):
                             # BIND extended support versions
                             sys.stdout.write( \
