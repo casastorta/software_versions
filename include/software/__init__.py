@@ -21,7 +21,6 @@ STABLE_CYRUS_IMAP_PATTERN = \
 STABLE_APACHE_URL = "http://httpd.apache.org/download.cgi"
 STABLE_APACHE_PATTERN = \
     '<a href="\#apache.*">(.*?)</a> \(released'
-    #'\<h1.*?\>Apache HTTP Server (.*?) \(httpd\)\: (.*?) is the latest'
 
 STABLE_SQUID_URL = "http://www.squid-cache.org/Versions/"
 STABLE_SQUID_PATTERN = \
