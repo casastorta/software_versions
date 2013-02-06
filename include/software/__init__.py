@@ -7,7 +7,7 @@ latest software versions from respective vendors' web sites.
 
 STABLE_SENDMAIL_URL = "http://www.sendmail.com/sm/open_source/download/"
 STABLE_SENDMAIL_PATTERN = \
-    'Sendmail.*<a href="/sm/open_source/download/(.*)">.*</a> is ' \
+    'Sendmail.*<a href="/sm/open_source/download/.*">(.*)</a> is ' \
     'available from'
 
 STABLE_BIND_URL = "http://www.isc.org/software/bind"
