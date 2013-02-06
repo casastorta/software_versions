@@ -7,7 +7,7 @@ latest software versions from respective vendors' web sites.
 
 STABLE_SENDMAIL_URL = "http://www.sendmail.com/sm/open_source/download/"
 STABLE_SENDMAIL_PATTERN = \
-    'Sendmail.*<a href="/sm/open_source/download/(.*)">.*</a> is ' \
+    'Sendmail.*<a href="/sm/open_source/download/.*">(.*)</a> is ' \
     'available from'
 
 STABLE_BIND_URL = "http://www.isc.org/software/bind"
@@ -20,7 +20,7 @@ STABLE_CYRUS_IMAP_PATTERN = \
 
 STABLE_APACHE_URL = "http://httpd.apache.org/download.cgi"
 STABLE_APACHE_PATTERN = \
-    '\<h1.*?\>Apache HTTP Server (.*?) \(httpd\)\: (.*?) is the latest'
+    '<a href="\#apache.*">(.*?)</a> \(released'
 
 STABLE_SQUID_URL = "http://www.squid-cache.org/Versions/"
 STABLE_SQUID_PATTERN = \
@@ -68,6 +68,10 @@ STABLE_VSFTPD_URL = "https://security.appspot.com/vsftpd.html"
 STABLE_VSFTPD_PATTERN = \
     '<li>vsftpd-(.*?) is released'
 
+STABLE_SENDMAILANALYZER_URL = "http://sareport.darold.net/"
+STABLE_SENDMAILANALYZER_PATTERN = \
+    '<h3>Version (.*?) -'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -80,8 +84,9 @@ __all__ = [
     "STABLE_OPENLDAP_URL", "STABLE_OPENLDAP_PATTERN",
     "STABLE_PLA_URL", "STABLE_PLA_PATTERN",
     "STABLE_POSTFIX_URL", "STABLE_POSTFIX_PATTERN",
-    "STABLE_NGINX_URL", "STABLE_NGINX_PATTERN"
-    "STABLE_MYSQL_URL", "STABLE_MYSQL_PATTERN"
-    "STABLE_PROFTPD_URL", "STABLE_PROFTPD_PATTERN"
-    "STABLE_VSFTPD_URL", "STABLE_VSFTPD_PATTERN"
+    "STABLE_NGINX_URL", "STABLE_NGINX_PATTERN",
+    "STABLE_MYSQL_URL", "STABLE_MYSQL_PATTERN",
+    "STABLE_PROFTPD_URL", "STABLE_PROFTPD_PATTERN",
+    "STABLE_VSFTPD_URL", "STABLE_VSFTPD_PATTERN",
+    "STABLE_SENDMAILANALYZER_URL", "STABLE_SENDMAILANALYZER_PATTERN"
 ]

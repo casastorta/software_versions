@@ -8,6 +8,7 @@ from types import NoneType
 import software as sftw
 import re
 import urllib
+import sys
 
 
 def check_sendmail():
@@ -47,7 +48,7 @@ def check_apache_httpd():
     url = sftw.STABLE_APACHE_URL
     pattern = sftw.STABLE_APACHE_PATTERN
 
-    return (__grep_out_info(url, pattern))
+    return (__grep_out_info(url, pattern, recursive=True))
 
 
 def check_squid():
@@ -160,6 +161,16 @@ def check_vsftpd():
     return (__grep_out_info(url, pattern))
 
 
+def check_sendmailanalyzer():
+    '''
+    Checks SendmailAnalyzer stable version(s) from the website
+    '''
+    url = sftw.STABLE_SENDMAILANALYZER_URL
+    pattern = sftw.STABLE_SENDMAILANALYZER_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(url, pattern, match_number=1, recursive=False):
     '''
     Does the pull-and-grep part in search for requested info
@@ -168,6 +179,8 @@ def __grep_out_info(url, pattern, match_number=1, recursive=False):
     try:
         f = urllib.urlopen(url)
         content = f.read()
+    except KeyboardInterrupt:
+        sys.exit("Break.")
     except:
         print ("***ERR*** Can't pull %s for software version" % (url))
         return False
