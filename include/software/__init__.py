@@ -14,7 +14,7 @@ STABLE_BIND_URL = \
     "http://www.isc.org/downloads/software-support-policy/" \
     "bind-software-status/"
 STABLE_BIND_PATTERN = \
-    r'^<td>(.*)</td>\n<td class="c_sw">'
+    r'^<td>([^\s\xc2]+).*</td>\n<td class="c_sw">'
 
 STABLE_CYRUS_IMAP_URL = "http://www.cyrusimap.org/"
 STABLE_CYRUS_IMAP_PATTERN = \
