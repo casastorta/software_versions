@@ -70,9 +70,9 @@ STABLE_VSFTPD_URL = "https://security.appspot.com/vsftpd.html"
 STABLE_VSFTPD_PATTERN = \
     r'<li>vsftpd-(.*?) is released'
 
-STABLE_SENDMAILANALYZER_URL = "http://sareport.darold.net/"
+STABLE_SENDMAILANALYZER_URL = "http://sourceforge.net/projects/sa-report/files/"
 STABLE_SENDMAILANALYZER_PATTERN = \
-    r'<h3>Version (.*?) -'
+    r'<span>Download sendmailanalyzer-(.*?).tar.gz '
 
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
