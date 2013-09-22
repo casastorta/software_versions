@@ -31,6 +31,16 @@ def check_bind():
     return (__grep_out_info(url, pattern, multiline=True))
 
 
+def check_dhcp():
+    '''
+    Checks ISC DHCP stable version(s) from the website
+    '''
+    url = sftw.STABLE_DHCP_URL
+    pattern = sftw.STABLE_DHCP_PATTERN
+
+    return (__grep_out_info(url, pattern, multiline=True))
+
+
 def check_cyrus_imapd():
     '''
     Checks Cyrus-IMAPD stable version(s) from the website

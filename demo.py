@@ -15,6 +15,7 @@ def main():
 
     print ("Sendmail:            %s" % (ver.check_sendmail()))
     print ("ISC BIND:            %s" % (ver.check_bind()))
+    print ("ISC DHCP:            %s" % (ver.check_dhcp()))
     print ("Cyrus-IMAPD:         %s" % (ver.check_cyrus_imapd()))
     print ("Apache HTTP:         %s" % (ver.check_apache_httpd()))
     print ("SQUID:               %s" % (ver.check_squid()))

@@ -16,6 +16,12 @@ STABLE_BIND_URL = \
 STABLE_BIND_PATTERN = \
     r'^<td>([^\s\xc2]+).*</td>\n<td class="c_sw">'
 
+STABLE_DHCP_URL = \
+    "http://www.isc.org/downloads/software-support-policy/" \
+    "dhcp-software-status/"
+STABLE_DHCP_PATTERN = \
+    r'^<td>([^\s\xc2]+).*</td>\n<td class="c_sw">'
+
 STABLE_CYRUS_IMAP_URL = "http://www.cyrusimap.org/"
 STABLE_CYRUS_IMAP_PATTERN = \
     r'<p>Version: (.*?)</p>'
