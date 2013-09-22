@@ -28,7 +28,7 @@ def check_bind():
     url = sftw.STABLE_BIND_URL
     pattern = sftw.STABLE_BIND_PATTERN
 
-    return (__grep_out_info(url, pattern, recursive=True))
+    return (__grep_out_info(url, pattern, multiline=True))
 
 
 def check_cyrus_imapd():
@@ -88,7 +88,7 @@ def check_squirrelmail():
     url = sftw.STABLE_SQUIRRELMAIL_URL
     pattern = sftw.STABLE_SQUIRRELMAIL_PATTERN
 
-    return (__grep_out_info(url, pattern))
+    return (__grep_out_info(url, pattern, only_first=True))
 
 
 def check_openldap():
@@ -108,7 +108,7 @@ def check_phpldapadmin():
     url = sftw.STABLE_PLA_URL
     pattern = sftw.STABLE_PLA_PATTERN
 
-    return (__grep_out_info(url, pattern))
+    return (__grep_out_info(url, pattern, only_first=True))
 
 
 def check_nginx():
@@ -128,7 +128,7 @@ def check_postfix():
     url = sftw.STABLE_POSTFIX_URL
     pattern = sftw.STABLE_POSTFIX_PATTERN
 
-    return (__grep_out_info(url, pattern))
+    return (__grep_out_info(url, pattern, multiline=True, only_first=True))
 
 
 def check_mysql():
@@ -138,7 +138,7 @@ def check_mysql():
     url = sftw.STABLE_MYSQL_URL
     pattern = sftw.STABLE_MYSQL_PATTERN
 
-    return (__grep_out_info(url, pattern))
+    return (__grep_out_info(url, pattern, only_first=True))
 
 
 def check_proftpd():
@@ -171,7 +171,10 @@ def check_sendmailanalyzer():
     return (__grep_out_info(url, pattern))
 
 
-def __grep_out_info(url, pattern, match_number=1, recursive=False):
+def __grep_out_info(
+    url, pattern, match_number=1, recursive=False, multiline=False,
+    only_first=False
+):
     '''
     Does the pull-and-grep part in search for requested info
     '''
@@ -189,10 +192,16 @@ def __grep_out_info(url, pattern, match_number=1, recursive=False):
 
     if (recursive is False):
         # We do search for one-time occurence of a string
-        m = re.search(pattern, content, re.DOTALL)
+        flags = re.DOTALL
+        if (multiline):
+            flags = re.MULTILINE
+        m = re.findall(pattern, content, flags)
 
         if (type(m) is not NoneType):
-            return [str(m.group(match_number)).strip()]
+            if (only_first):
+                return([m[0]])
+            else:
+                return(m)
 
         else:
             print ("***WARN*** Can't locate %s in %s for software version" % \
