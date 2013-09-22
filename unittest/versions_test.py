@@ -24,6 +24,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_bind()) \
         )
 
+    def test_dhcp(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_dhcp()) \
+        )
+
     def test_cyrus_imapd(self):
         self.assertTrue( \
             self.__test_version(ver.check_cyrus_imapd()) \
