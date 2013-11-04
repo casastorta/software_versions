@@ -14,7 +14,7 @@ STABLE_BIND_URL = \
     "http://www.isc.org/downloads/software-support-policy/" \
     "bind-software-status/"
 STABLE_BIND_PATTERN = \
-    r'^<td>([^\s\xc2]+).*</td>\n<td class="c_sw">'
+    r'^<td><a.*>([^\s\xc2]+).*</a></td>\n<td class="c_sw">'
 
 STABLE_DHCP_URL = \
     "http://www.isc.org/downloads/software-support-policy/" \
