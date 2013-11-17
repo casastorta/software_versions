@@ -5,7 +5,7 @@ Created on Nov 21, 2011
 '''
 
 from types import NoneType
-import software as sftw
+import software_versions as sftw
 import re
 import urllib
 import sys

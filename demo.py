@@ -11,7 +11,7 @@ import sys
 
 def main():
 
-    from software import versions as ver
+    from software_versions import versions as ver
 
     print ("Sendmail:            %s" % (ver.check_sendmail()))
     print ("ISC BIND:            %s" % (ver.check_bind()))
@@ -33,7 +33,7 @@ def main():
 
 
 def set_include_path():
-    include_path = os.path.abspath("./include/")
+    include_path = os.path.abspath("./")
     sys.path.append(include_path)
 
 

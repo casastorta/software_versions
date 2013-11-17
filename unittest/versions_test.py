@@ -161,7 +161,7 @@ class TestVersionFunctions(unittest.TestCase):
 
 
 def set_include_path():
-    include_path = os.path.abspath("../include/")
+    include_path = os.path.abspath("../")
     sys.path.append(include_path)
 
 
