@@ -167,7 +167,7 @@ def set_include_path():
 
 if __name__ == "__main__":
     set_include_path()
-    from software import versions as ver
+    from software_versions import versions as ver
 
     #unittest.main()
     suite = unittest.TestLoader().loadTestsFromTestCase(TestVersionFunctions)
