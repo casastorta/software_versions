@@ -30,6 +30,7 @@ def main():
     print ("ProFTPD:             %s" % (ver.check_proftpd()))
     print ("vsftpd:              %s" % (ver.check_vsftpd()))
     print ("SendmailAnalyzer:    %s" % (ver.check_sendmailanalyzer()))
+    print ("Django:              %s" % (ver.check_django()))
 
 
 def set_include_path():
