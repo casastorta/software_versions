@@ -10,4 +10,5 @@ setup(name='software_versions',
     author_email='dev@krivokuca.net',
     url='https://github.com/casastorta/software_versions',
     packages=['software_versions'],
+    license='MIT'
 )
