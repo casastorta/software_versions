@@ -4,11 +4,18 @@ Created on Nov 21, 2011
 @author: vkrivoku
 '''
 
-from types import NoneType
 import software_versions as sftw
 import re
-import urllib
 import sys
+
+dopy2 = False
+
+try:
+    # Python 3 way
+    import urllib.request as client
+except ImportError:
+    import urllib as client
+    dopy2 = True
 
 
 def check_sendmail():
@@ -181,6 +188,16 @@ def check_sendmailanalyzer():
     return (__grep_out_info(url, pattern))
 
 
+def check_django():
+    '''
+    Checks Django stable version from the website
+    '''
+    url = sftw.STABLE_DJANGO_URL
+    pattern = sftw.STABLE_DJANGO_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False
@@ -189,16 +206,17 @@ def __grep_out_info(
     Does the pull-and-grep part in search for requested info
     '''
     content = ''
-    try:
-        f = urllib.urlopen(url)
-        content = f.read()
-    except KeyboardInterrupt:
-        sys.exit("Break.")
-    except:
-        print ("***ERR*** Can't pull %s for software version" % (url))
-        return False
 
-    f.close()
+    try:
+        f = client.urlopen(url)
+        content = f.read()
+        if dopy2 is False:
+            content = content.decode("utf-8")
+        f.close()
+    except:
+        print (("***ERR*** Can't pull %s for software version: %s" %
+            (url, sys.exc_info()[0])))
+        return False
 
     if (recursive is False):
         # We do search for one-time occurence of a string
@@ -207,7 +225,7 @@ def __grep_out_info(
             flags = re.MULTILINE
         m = re.findall(pattern, content, flags)
 
-        if (type(m) is not NoneType):
+        if (m is not None):
             if (only_first):
                 return([m[0]])
             else:
@@ -226,7 +244,7 @@ def __grep_out_info(
 
         for line in parts[:]:
             m = re.search(pattern, line)
-            if (type(m) is not NoneType):
+            if (m is not None):
                 list.append(str(m.group(match_number)).strip())
 
         if (len(list) == 0):

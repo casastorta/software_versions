@@ -99,6 +99,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_sendmailanalyzer()) \
         )
 
+    def test_django(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_django()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
