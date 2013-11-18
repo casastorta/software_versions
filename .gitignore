@@ -2,3 +2,4 @@
 *.sublime-*
 build/*
 dist/*
+MANIFEST
