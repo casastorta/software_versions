@@ -76,7 +76,8 @@ STABLE_VSFTPD_URL = "https://security.appspot.com/vsftpd.html"
 STABLE_VSFTPD_PATTERN = \
     r'<li>vsftpd-(.*?) is released'
 
-STABLE_SENDMAILANALYZER_URL = "http://sourceforge.net/projects/sa-report/files/"
+STABLE_SENDMAILANALYZER_URL = \
+    "http://sourceforge.net/projects/sa-report/files/"
 STABLE_SENDMAILANALYZER_PATTERN = \
     r'<span>Download sendmailanalyzer-(.*?).tar.gz '
 

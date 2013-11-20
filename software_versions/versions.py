@@ -214,8 +214,8 @@ def __grep_out_info(
             content = content.decode("utf-8")
         f.close()
     except:
-        print (("***ERR*** Can't pull %s for software version: %s" %
-            (url, sys.exc_info()[0])))
+        print (("***ERR*** Can't pull %s for software version: %s"
+              (url, sys.exc_info()[0])))
         return False
 
     if (recursive is False):
@@ -232,8 +232,8 @@ def __grep_out_info(
                 return(m)
 
         else:
-            print ("***WARN*** Can't locate %s in %s for software version" % \
-                (pattern, url))
+            print ("***WARN*** Can't locate %s in %s for software version" %
+                  (pattern, url))
 
             return False
     else:

@@ -15,93 +15,93 @@ class TestVersionFunctions(unittest.TestCase):
     def test_sendmail(self):
         #if (self.__test_version(ver.check_sendmail()) == False):
         #    self.addError("Sendmail version doesn't seem to be version")
-        self.assertTrue( \
-            self.__test_version(ver.check_sendmail()) \
+        self.assertTrue(
+            self.__test_version(ver.check_sendmail())
         )
 
     def test_bind(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_bind()) \
+        self.assertTrue(
+            self.__test_version(ver.check_bind())
         )
 
     def test_dhcp(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_dhcp()) \
+        self.assertTrue(
+            self.__test_version(ver.check_dhcp())
         )
 
     def test_cyrus_imapd(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_cyrus_imapd()) \
+        self.assertTrue(
+            self.__test_version(ver.check_cyrus_imapd())
         )
 
     def test_apache_httpd(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_apache_httpd()) \
+        self.assertTrue(
+            self.__test_version(ver.check_apache_httpd())
         )
 
     def test_squid(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_squid()) \
+        self.assertTrue(
+            self.__test_version(ver.check_squid())
         )
 
     def test_canit(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_canit()) \
+        self.assertTrue(
+            self.__test_version(ver.check_canit())
         )
 
     def test_postgresql(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_postgresql()) \
+        self.assertTrue(
+            self.__test_version(ver.check_postgresql())
         )
 
     def test_squirrelmail(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_squirrelmail()) \
+        self.assertTrue(
+            self.__test_version(ver.check_squirrelmail())
         )
 
     def test_openldap(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_openldap()) \
+        self.assertTrue(
+            self.__test_version(ver.check_openldap())
         )
 
     def test_phpldapadmin(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_phpldapadmin()) \
+        self.assertTrue(
+            self.__test_version(ver.check_phpldapadmin())
         )
 
     def test_postfix(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_postfix()) \
+        self.assertTrue(
+            self.__test_version(ver.check_postfix())
         )
 
     def test_nginx(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_nginx()) \
+        self.assertTrue(
+            self.__test_version(ver.check_nginx())
         )
 
     def test_mysql(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_mysql()) \
+        self.assertTrue(
+            self.__test_version(ver.check_mysql())
         )
 
     def test_proftpd(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_proftpd()) \
+        self.assertTrue(
+            self.__test_version(ver.check_proftpd())
         )
 
     def test_vsftpd(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_vsftpd()) \
+        self.assertTrue(
+            self.__test_version(ver.check_vsftpd())
         )
 
     def test_sednmailanalyzer(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_sendmailanalyzer()) \
+        self.assertTrue(
+            self.__test_version(ver.check_sendmailanalyzer())
         )
 
     def test_django(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_django()) \
+        self.assertTrue(
+            self.__test_version(ver.check_django())
         )
 
     def __test_version(self, input_values=None):
@@ -128,8 +128,7 @@ class TestVersionFunctions(unittest.TestCase):
                                         "Version (%s from %s) seems to "
                                         "contain short chars as extended "
                                         "version? " %
-                                        (input_part, value)
-                                    )
+                                        (input_part, value))
                                 )
                                 sys.stdout.flush()
                                 input_num = 0
@@ -137,27 +136,26 @@ class TestVersionFunctions(unittest.TestCase):
                                 input_num = -1
                         elif (input_part.find('-ESV-') > -1):
                             # BIND extended support versions
-                            sys.stdout.write( \
-                                ("\n\t" \
-                                    "Version (%s from %s) seems to be " \
-                                    "BIND ESV? " % \
-                                    (input_part, value) \
-                                ) \
+                            sys.stdout.write(
+                                ("\n\t"
+                                    "Version (%s from %s) seems to be "
+                                    "BIND ESV? " %
+                                    (input_part, value))
                             )
                             sys.stdout.flush()
                             input_num = 0
                         else:
                             input_num = -2
-                    self.assertGreater( \
-                        input_num, -1, \
-                        ("Piece (%s) of version number (%s) didn't " \
-                         "transfer to int?" % (input_part, value)) \
+                    self.assertGreater(
+                        input_num, -1,
+                        ("Piece (%s) of version number (%s) didn't "
+                         "transfer to int?" % (input_part, value))
                     )
-                    self.assertLess( \
-                        input_num, \
-                        999, \
-                        ("Piece (%s) of version number (%s) is higher " \
-                         "than 999" % (input_part, value)) \
+                    self.assertLess(
+                        input_num,
+                        999,
+                        ("Piece (%s) of version number (%s) is higher "
+                         "than 999" % (input_part, value))
                     )
 
             return(True)
