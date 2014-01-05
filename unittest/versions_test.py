@@ -104,6 +104,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_django()) \
         )
 
+    def test_hpbios(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_hpbios()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):

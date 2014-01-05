@@ -84,6 +84,13 @@ STABLE_DJANGO_URL = "https://www.djangoproject.com/download/"
 STABLE_DJANGO_PATTERN = \
     r'<p>The latest official version is (.*?).</p>'
 
+STABLE_HPBIOS_URL = ("http://forum.notebookreview.com/" +
+                     "hp-business-class-notebooks/" +
+                     "601489-current-hp-business-bios-releases.html")
+STABLE_HPBIOS_PATTERN = ('<br>8560p</font></strong></td><td style="border: ' +
+                         '1px solid #000000; width: 75px;"' +
+                         ' valign="top">(.*?)</td>')
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -101,5 +108,6 @@ __all__ = [
     "STABLE_PROFTPD_URL", "STABLE_PROFTPD_PATTERN",
     "STABLE_VSFTPD_URL", "STABLE_VSFTPD_PATTERN",
     "STABLE_SENDMAILANALYZER_URL", "STABLE_SENDMAILANALYZER_PATTERN",
-    "STABLE_DJANGO_URL", "STABLE_DJANGO_PATTERN"
+    "STABLE_DJANGO_URL", "STABLE_DJANGO_PATTERN",
+    "STABLE_HPBIOS_URL", "STABLE_HPBIOS_PATTERN"
 ]
