@@ -35,7 +35,7 @@ def check_bind():
     url = sftw.STABLE_BIND_URL
     pattern = sftw.STABLE_BIND_PATTERN
 
-    return (__grep_out_info(url, pattern, multiline=True))
+    return (__grep_out_info(url, pattern, multiline=True, only_first=True))
 
 
 def check_dhcp():
@@ -45,7 +45,7 @@ def check_dhcp():
     url = sftw.STABLE_DHCP_URL
     pattern = sftw.STABLE_DHCP_PATTERN
 
-    return (__grep_out_info(url, pattern, multiline=True))
+    return (__grep_out_info(url, pattern, multiline=True, only_first=True))
 
 
 def check_cyrus_imapd():
@@ -210,7 +210,7 @@ def check_hpbios():
 
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
-    only_first=False
+    only_first=False, greedy=False
 ):
     '''
     Does the pull-and-grep part in search for requested info
@@ -231,8 +231,13 @@ def __grep_out_info(
     if (recursive is False):
         # We do search for one-time occurence of a string
         flags = re.DOTALL
-        if (multiline):
+        if multiline is True:
             flags = re.MULTILINE
+        elif greedy is True:
+            flags = re.S
+
+        #flags += re.DEBUG
+
         m = re.findall(pattern, content, flags)
 
         if (m is not None):

@@ -11,16 +11,14 @@ STABLE_SENDMAIL_PATTERN = \
     r'available from'
 
 STABLE_BIND_URL = \
-    "http://www.isc.org/downloads/software-support-policy/" \
-    "bind-software-status/"
+    "https://www.isc.org/downloads/"
 STABLE_BIND_PATTERN = \
-    r'^<td>([^\s\xc2]+).*</td>\n<td class="c_sw">'
+    r'<tr>\n<td>(\d+.*)</td>\n<td class="c_sw"><a href'
 
 STABLE_DHCP_URL = \
-    "http://www.isc.org/downloads/software-support-policy/" \
-    "dhcp-software-status/"
+    "https://www.isc.org/downloads/"
 STABLE_DHCP_PATTERN = \
-    r'^<td>([^\s\xc2]+).*</td>\n<td class="c_sw">'
+    r'<tr>\n<td><span.*>(\d+.*)</span></td>\n<td class="c_sw"'
 
 STABLE_CYRUS_IMAP_URL = "http://www.cyrusimap.org/"
 STABLE_CYRUS_IMAP_PATTERN = \
