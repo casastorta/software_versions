@@ -1,12 +1,8 @@
 #!/usr/bin/env python
 
 '''
-``software`` module contains functionality to parse out
-latest software versions from respective vendors' web sites.
+Regexp parser definitions for software_versions module
 '''
-
-import software_versions.re as sre
-import software_versions.dom as sdom
 
 STABLE_SENDMAIL_URL = "http://www.sendmail.com/sm/open_source/download/"
 STABLE_SENDMAIL_PATTERN = \
@@ -92,24 +88,3 @@ STABLE_HPBIOS_URL = \
 STABLE_HPBIOS_PATTERN = \
     '<br>8560p</font></strong></td><td style="border: 1px solid #000000; ' \
     'width: 75px;" valign="top">(.*?)</td>'
-
-__all__ = [
-    "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
-    "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
-    "STABLE_CYRUS_IMAP_URL", "STABLE_CYRUS_IMAP_PATTERN",
-    "STABLE_APACHE_URL", "STABLE_APACHE_PATTERN",
-    "STABLE_SQUID_URL", "STABLE_SQUID_PATTERN",
-    "STABLE_CANIT_URL", "STABLE_CANIT_PATTERN",
-    "STABLE_PSQL_URL", "STABLE_PSQL_PATTERN",
-    "STABLE_SQUIRRELMAIL_URL", "STABLE_SQUIRRELMAIL_PATTERN",
-    "STABLE_OPENLDAP_URL", "STABLE_OPENLDAP_PATTERN",
-    "STABLE_PLA_URL", "STABLE_PLA_PATTERN",
-    "STABLE_POSTFIX_URL", "STABLE_POSTFIX_PATTERN",
-    "STABLE_NGINX_URL", "STABLE_NGINX_PATTERN",
-    "STABLE_MYSQL_URL", "STABLE_MYSQL_PATTERN",
-    "STABLE_PROFTPD_URL", "STABLE_PROFTPD_PATTERN",
-    "STABLE_VSFTPD_URL", "STABLE_VSFTPD_PATTERN",
-    "STABLE_SENDMAILANALYZER_URL", "STABLE_SENDMAILANALYZER_PATTERN",
-    "STABLE_DJANGO_URL", "STABLE_DJANGO_PATTERN",
-    "STABLE_HPBIOS_URL", "STABLE_HPBIOS_PATTERN"
-]
