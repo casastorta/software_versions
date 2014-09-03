@@ -85,7 +85,7 @@ def check_canit():
     url = sftw.STABLE_CANIT_URL
     pattern = sftw.STABLE_CANIT_PATTERN
 
-    return (__grep_out_info(url, pattern))
+    return (__grep_out_info(url, pattern, only_first=True))
 
 
 def check_postgresql():
