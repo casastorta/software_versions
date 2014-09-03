@@ -90,6 +90,10 @@ STABLE_HPBIOS_PATTERN = \
     '<br>8560p</font></strong></td><td style="border: 1px solid #000000; ' \
     'width: 75px;" valign="top">(.*?)</td>'
 
+STABLE_STUNNEL_URL = "https://www.stunnel.org/downloads.html"
+STABLE_STUNNEL_PATTERN = \
+    r'<td><a href="downloads/stunnel-.*?.tar.gz">stunnel-(.*?).tar.gz</a></td>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -108,5 +112,6 @@ __all__ = [
     "STABLE_VSFTPD_URL", "STABLE_VSFTPD_PATTERN",
     "STABLE_SENDMAILANALYZER_URL", "STABLE_SENDMAILANALYZER_PATTERN",
     "STABLE_DJANGO_URL", "STABLE_DJANGO_PATTERN",
-    "STABLE_HPBIOS_URL", "STABLE_HPBIOS_PATTERN"
+    "STABLE_HPBIOS_URL", "STABLE_HPBIOS_PATTERN",
+    "STABLE_STUNNEL_URL", "STABLE_STUNNEL_PATTERN"
 ]

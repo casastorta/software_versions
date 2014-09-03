@@ -32,6 +32,7 @@ def main():
     print (("SendmailAnalyzer:    %s" % (ver.check_sendmailanalyzer())))
     print (("Django:              %s" % (ver.check_django())))
     print (("HP 8560p BIOS:       %s" % (ver.check_hpbios())))
+    print (("stunnel:             %s" % (ver.check_stunnel())))
 
 
 def set_include_path():
