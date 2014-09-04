@@ -94,7 +94,7 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_vsftpd())
         )
 
-    def test_sednmailanalyzer(self):
+    def test_sendmailanalyzer(self):
         self.assertTrue(
             self.__test_version(ver.check_sendmailanalyzer())
         )
