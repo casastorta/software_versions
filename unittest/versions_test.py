@@ -109,6 +109,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_hpbios()) \
         )
 
+    def test_stunnel(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_stunnel()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
