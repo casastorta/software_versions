@@ -218,6 +218,16 @@ def check_stunnel():
     return (__grep_out_info(url, pattern, only_first=True))
 
 
+def check_pound():
+    '''
+    Checks Pound stable version from the website
+    '''
+    url = sftw.STABLE_POUND_URL
+    pattern = sftw.STABLE_POUND_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False
