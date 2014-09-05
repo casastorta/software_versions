@@ -34,6 +34,7 @@ def main():
     print (("HP 8560p BIOS:       %s" % (ver.check_hpbios())))
     print (("stunnel:             %s" % (ver.check_stunnel())))
     print (("Pound:               %s" % (ver.check_pound())))
+    print (("Linux kernel:        %s" % (ver.check_linux())))
 
 
 def set_include_path():

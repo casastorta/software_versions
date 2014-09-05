@@ -98,6 +98,11 @@ STABLE_POUND_URL = "http://www.apsis.ch/pound/"
 STABLE_POUND_PATTERN = \
     r'Download the latest version <a .*?>Pound-(.*?).tgz</a>'
 
+STABLE_LINUX_URL = "http://www.kernel.org/"
+STABLE_LINUX_PATTERN = \
+    r'<td id="latest_link">.*?' \
+    r'<a href="./pub/linux/kernel/v3.x/linux-.*?.tar.xz">(.*?)</a>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -118,5 +123,6 @@ __all__ = [
     "STABLE_DJANGO_URL", "STABLE_DJANGO_PATTERN",
     "STABLE_HPBIOS_URL", "STABLE_HPBIOS_PATTERN",
     "STABLE_STUNNEL_URL", "STABLE_STUNNEL_PATTERN",
-    "STABLE_POUND_URL", "STABLE_POUND_PATTERN"
+    "STABLE_POUND_URL", "STABLE_POUND_PATTERN",
+    "STABLE_LINUX_URL", "STABLE_LINUX_PATTERN"
 ]

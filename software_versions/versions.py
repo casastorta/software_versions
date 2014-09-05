@@ -228,6 +228,16 @@ def check_pound():
     return (__grep_out_info(url, pattern))
 
 
+def check_linux():
+    '''
+    Checks Linux kernel stable version from the website
+    '''
+    url = sftw.STABLE_LINUX_URL
+    pattern = sftw.STABLE_LINUX_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False
