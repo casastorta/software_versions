@@ -34,7 +34,7 @@ STABLE_SQUID_PATTERN = \
 
 STABLE_CANIT_URL = "http://roaringpenguin.com/news"
 STABLE_CANIT_PATTERN = \
-     r'>Roaring Penguin Software releases CanIt (.*?)<'
+    r'>Roaring Penguin Software releases CanIt (.*?)<'
 
 STABLE_PSQL_URL = "http://www.postgresql.org/versions.rss"
 STABLE_PSQL_PATTERN = \
