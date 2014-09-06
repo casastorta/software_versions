@@ -124,6 +124,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_linux()) \
         )
 
+    def test_varnish(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_varnish()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
