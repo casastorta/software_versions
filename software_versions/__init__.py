@@ -103,6 +103,11 @@ STABLE_LINUX_PATTERN = \
     r'<td id="latest_link">.*?' \
     r'<a href="./pub/linux/kernel/v3.x/linux-.*?.tar.xz">(.*?)</a>'
 
+STABLE_VARNISH_URL = "https://www.varnish-cache.org/releases"
+STABLE_VARNISH_PATTERN = \
+    r'<h2 class="pane-title">Current supported releases</h2>.*?' \
+    r'<a href="/content/varnish-cache-.*?">Varnish Cache (.*?)</a>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -124,5 +129,6 @@ __all__ = [
     "STABLE_HPBIOS_URL", "STABLE_HPBIOS_PATTERN",
     "STABLE_STUNNEL_URL", "STABLE_STUNNEL_PATTERN",
     "STABLE_POUND_URL", "STABLE_POUND_PATTERN",
-    "STABLE_LINUX_URL", "STABLE_LINUX_PATTERN"
+    "STABLE_LINUX_URL", "STABLE_LINUX_PATTERN",
+    "STABLE_VARNISH_URL", "STABLE_VARNISH_PATTERN"
 ]

@@ -35,6 +35,7 @@ def main():
     print (("stunnel:             %s" % (ver.check_stunnel())))
     print (("Pound:               %s" % (ver.check_pound())))
     print (("Linux kernel:        %s" % (ver.check_linux())))
+    print (("Varnish:             %s" % (ver.check_varnish())))
 
 
 def set_include_path():
