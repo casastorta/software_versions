@@ -116,6 +116,11 @@ STABLE_OPENSSH_URL = "http://www.openssh.com/"
 STABLE_OPENSSH_PATTERN = \
     r'<a href="txt/release-.*?">OpenSSH (.*?)</a> released'
 
+STABLE_DOVECOT_URL = "http://www.dovecot.org/download.html"
+STABLE_DOVECOT_PATTERN = \
+    r'<h3>Stable releases</h3>.*?' \
+    r'Download <a href="releases/.*?/dovecot-(.*?).tar.gz">'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -140,5 +145,6 @@ __all__ = [
     "STABLE_LINUX_URL", "STABLE_LINUX_PATTERN",
     "STABLE_VARNISH_URL", "STABLE_VARNISH_PATTERN",
     "STABLE_CLAMAV_URL", "STABLE_CLAMAV_PATTERN",
-    "STABLE_OPENSSH_URL", "STABLE_OPENSSH_PATTERN"
+    "STABLE_OPENSSH_URL", "STABLE_OPENSSH_PATTERN",
+    "STABLE_DOVECOT_URL", "STABLE_DOVECOT_PATTERN"
 ]

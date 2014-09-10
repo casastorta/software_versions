@@ -38,6 +38,7 @@ def main():
     print (("Varnish:             %s" % (ver.check_varnish())))
     print (("ClamAV:              %s" % (ver.check_clamav())))
     print (("OpenSSH:             %s" % (ver.check_openssh())))
+    print (("Dovecot:             %s" % (ver.check_dovecot())))
 
 
 def set_include_path():
