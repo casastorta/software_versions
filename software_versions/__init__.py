@@ -108,6 +108,10 @@ STABLE_VARNISH_PATTERN = \
     r'<h2 class="pane-title">Current supported releases</h2>.*?' \
     r'<a href="/content/varnish-cache-.*?">Varnish Cache (.*?)</a>'
 
+STABLE_CLAMAV_URL = "http://www.clamav.net/download.html"
+STABLE_CLAMAV_PATTERN = \
+    r'<h3>The latest stable release is <strong>(.*?)</strong></h3>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -130,5 +134,6 @@ __all__ = [
     "STABLE_STUNNEL_URL", "STABLE_STUNNEL_PATTERN",
     "STABLE_POUND_URL", "STABLE_POUND_PATTERN",
     "STABLE_LINUX_URL", "STABLE_LINUX_PATTERN",
-    "STABLE_VARNISH_URL", "STABLE_VARNISH_PATTERN"
+    "STABLE_VARNISH_URL", "STABLE_VARNISH_PATTERN",
+    "STABLE_CLAMAV_URL", "STABLE_CLAMAV_PATTERN"
 ]

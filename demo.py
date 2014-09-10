@@ -36,6 +36,7 @@ def main():
     print (("Pound:               %s" % (ver.check_pound())))
     print (("Linux kernel:        %s" % (ver.check_linux())))
     print (("Varnish:             %s" % (ver.check_varnish())))
+    print (("ClamAV:              %s" % (ver.check_clamav())))
 
 
 def set_include_path():

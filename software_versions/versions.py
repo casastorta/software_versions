@@ -248,6 +248,16 @@ def check_varnish():
     return (__grep_out_info(url, pattern))
 
 
+def check_clamav():
+    '''
+    Checks ClamAV stable version from the website
+    '''
+    url = sftw.STABLE_CLAMAV_URL
+    pattern = sftw.STABLE_CLAMAV_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False
