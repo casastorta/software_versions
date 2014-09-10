@@ -112,6 +112,10 @@ STABLE_CLAMAV_URL = "http://www.clamav.net/download.html"
 STABLE_CLAMAV_PATTERN = \
     r'<h3>The latest stable release is <strong>(.*?)</strong></h3>'
 
+STABLE_OPENSSH_URL = "http://www.openssh.com/"
+STABLE_OPENSSH_PATTERN = \
+    r'<a href="txt/release-.*?">OpenSSH (.*?)</a> released'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -135,5 +139,6 @@ __all__ = [
     "STABLE_POUND_URL", "STABLE_POUND_PATTERN",
     "STABLE_LINUX_URL", "STABLE_LINUX_PATTERN",
     "STABLE_VARNISH_URL", "STABLE_VARNISH_PATTERN",
-    "STABLE_CLAMAV_URL", "STABLE_CLAMAV_PATTERN"
+    "STABLE_CLAMAV_URL", "STABLE_CLAMAV_PATTERN",
+    "STABLE_OPENSSH_URL", "STABLE_OPENSSH_PATTERN"
 ]

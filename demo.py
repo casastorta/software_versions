@@ -37,6 +37,7 @@ def main():
     print (("Linux kernel:        %s" % (ver.check_linux())))
     print (("Varnish:             %s" % (ver.check_varnish())))
     print (("ClamAV:              %s" % (ver.check_clamav())))
+    print (("OpenSSH:             %s" % (ver.check_openssh())))
 
 
 def set_include_path():
