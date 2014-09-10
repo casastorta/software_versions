@@ -104,11 +104,6 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_django())
         )
 
-    def test_hpbios(self):
-        self.assertTrue( \
-            self.__test_version(ver.check_hpbios()) \
-        )
-
     def test_stunnel(self):
         self.assertTrue( \
             self.__test_version(ver.check_stunnel()) \
