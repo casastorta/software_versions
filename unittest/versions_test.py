@@ -134,6 +134,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_clamav()) \
         )
 
+    def test_openssh(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_openssh()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
