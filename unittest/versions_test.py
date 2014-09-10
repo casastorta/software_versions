@@ -129,6 +129,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_varnish()) \
         )
 
+    def test_clamav(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_clamav()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
