@@ -31,6 +31,13 @@ def main():
     print (("vsftpd:              %s" % (ver.check_vsftpd())))
     print (("SendmailAnalyzer:    %s" % (ver.check_sendmailanalyzer())))
     print (("Django:              %s" % (ver.check_django())))
+    print (("stunnel:             %s" % (ver.check_stunnel())))
+    print (("Pound:               %s" % (ver.check_pound())))
+    print (("Linux kernel:        %s" % (ver.check_linux())))
+    print (("Varnish:             %s" % (ver.check_varnish())))
+    print (("ClamAV:              %s" % (ver.check_clamav())))
+    print (("OpenSSH:             %s" % (ver.check_openssh())))
+    print (("Dovecot:             %s" % (ver.check_dovecot())))
 
 
 def set_include_path():

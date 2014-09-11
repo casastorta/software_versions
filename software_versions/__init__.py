@@ -11,16 +11,14 @@ STABLE_SENDMAIL_PATTERN = \
     r'available from'
 
 STABLE_BIND_URL = \
-    "http://www.isc.org/downloads/software-support-policy/" \
-    "bind-software-status/"
+    "https://www.isc.org/downloads/"
 STABLE_BIND_PATTERN = \
-    r'^<td>([^\s\xc2]+).*</td>\n<td class="c_sw">'
+    r'<tr>\n<td>(\d+.*)</td>\n<td class="c_sw"><a href'
 
 STABLE_DHCP_URL = \
-    "http://www.isc.org/downloads/software-support-policy/" \
-    "dhcp-software-status/"
+    "https://www.isc.org/downloads/"
 STABLE_DHCP_PATTERN = \
-    r'^<td>([^\s\xc2]+).*</td>\n<td class="c_sw">'
+    r'<tr>\n<td><span.*>(\d+.*)</span></td>\n<td class="c_sw"'
 
 STABLE_CYRUS_IMAP_URL = "http://www.cyrusimap.org/"
 STABLE_CYRUS_IMAP_PATTERN = \
@@ -36,7 +34,7 @@ STABLE_SQUID_PATTERN = \
 
 STABLE_CANIT_URL = "http://roaringpenguin.com/news"
 STABLE_CANIT_PATTERN = \
-    r'<a href.*?>CanIt (.*?) '
+    r'>Roaring Penguin Software releases CanIt (.*?)<'
 
 STABLE_PSQL_URL = "http://www.postgresql.org/versions.rss"
 STABLE_PSQL_PATTERN = \
@@ -76,13 +74,45 @@ STABLE_VSFTPD_URL = "https://security.appspot.com/vsftpd.html"
 STABLE_VSFTPD_PATTERN = \
     r'<li>vsftpd-(.*?) is released'
 
-STABLE_SENDMAILANALYZER_URL = "http://sourceforge.net/projects/sa-report/files/"
+STABLE_SENDMAILANALYZER_URL = \
+    "http://sourceforge.net/projects/sa-report/files/"
 STABLE_SENDMAILANALYZER_PATTERN = \
     r'<span>Download sendmailanalyzer-(.*?).tar.gz '
 
 STABLE_DJANGO_URL = "https://www.djangoproject.com/download/"
 STABLE_DJANGO_PATTERN = \
     r'<p>The latest official version is (.*?).</p>'
+
+STABLE_STUNNEL_URL = "https://www.stunnel.org/downloads.html"
+STABLE_STUNNEL_PATTERN = \
+    r'<td><a href="downloads/stunnel-.*?.tar.gz">stunnel-(.*?).tar.gz</a></td>'
+
+STABLE_POUND_URL = "http://www.apsis.ch/pound/"
+STABLE_POUND_PATTERN = \
+    r'Download the latest version <a .*?>Pound-(.*?).tgz</a>'
+
+STABLE_LINUX_URL = "http://www.kernel.org/"
+STABLE_LINUX_PATTERN = \
+    r'<td id="latest_link">.*?' \
+    r'<a href="./pub/linux/kernel/v3.x/linux-.*?.tar.xz">(.*?)</a>'
+
+STABLE_VARNISH_URL = "https://www.varnish-cache.org/releases"
+STABLE_VARNISH_PATTERN = \
+    r'<h2 class="pane-title">Current supported releases</h2>.*?' \
+    r'<a href="/content/varnish-cache-.*?">Varnish Cache (.*?)</a>'
+
+STABLE_CLAMAV_URL = "http://www.clamav.net/download.html"
+STABLE_CLAMAV_PATTERN = \
+    r'<h3>The latest stable release is <strong>(.*?)</strong></h3>'
+
+STABLE_OPENSSH_URL = "http://www.openssh.com/"
+STABLE_OPENSSH_PATTERN = \
+    r'<a href="txt/release-.*?">OpenSSH (.*?)</a> released'
+
+STABLE_DOVECOT_URL = "http://www.dovecot.org/download.html"
+STABLE_DOVECOT_PATTERN = \
+    r'<h3>Stable releases</h3>.*?' \
+    r'Download <a href="releases/.*?/dovecot-(.*?).tar.gz">'
 
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
@@ -101,5 +131,12 @@ __all__ = [
     "STABLE_PROFTPD_URL", "STABLE_PROFTPD_PATTERN",
     "STABLE_VSFTPD_URL", "STABLE_VSFTPD_PATTERN",
     "STABLE_SENDMAILANALYZER_URL", "STABLE_SENDMAILANALYZER_PATTERN",
-    "STABLE_DJANGO_URL", "STABLE_DJANGO_PATTERN"
+    "STABLE_DJANGO_URL", "STABLE_DJANGO_PATTERN",
+    "STABLE_STUNNEL_URL", "STABLE_STUNNEL_PATTERN",
+    "STABLE_POUND_URL", "STABLE_POUND_PATTERN",
+    "STABLE_LINUX_URL", "STABLE_LINUX_PATTERN",
+    "STABLE_VARNISH_URL", "STABLE_VARNISH_PATTERN",
+    "STABLE_CLAMAV_URL", "STABLE_CLAMAV_PATTERN",
+    "STABLE_OPENSSH_URL", "STABLE_OPENSSH_PATTERN",
+    "STABLE_DOVECOT_URL", "STABLE_DOVECOT_PATTERN"
 ]
