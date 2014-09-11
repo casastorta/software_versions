@@ -139,6 +139,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_dovecot()) \
         )
 
+    def test_mongodb(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_mongodb()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
