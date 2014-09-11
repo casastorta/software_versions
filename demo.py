@@ -38,6 +38,7 @@ def main():
     print (("ClamAV:              %s" % (ver.check_clamav())))
     print (("OpenSSH:             %s" % (ver.check_openssh())))
     print (("Dovecot:             %s" % (ver.check_dovecot())))
+    print (("MongoDB:             %s" % (ver.check_mongodb())))
 
 
 def set_include_path():

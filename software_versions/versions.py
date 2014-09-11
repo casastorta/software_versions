@@ -268,6 +268,16 @@ def check_dovecot():
     return (__grep_out_info(url, pattern))
 
 
+def check_mongodb():
+    '''
+    Checks MongoDB production version from the website
+    '''
+    url = sftw.STABLE_MONGODB_URL
+    pattern = sftw.STABLE_MONGODB_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False
