@@ -39,6 +39,7 @@ def main():
     print (("OpenSSH:             %s" % (ver.check_openssh())))
     print (("Dovecot:             %s" % (ver.check_dovecot())))
     print (("MongoDB:             %s" % (ver.check_mongodb())))
+    print (("SpamAssassin:        %s" % (ver.check_spamassassin())))
 
 
 def set_include_path():

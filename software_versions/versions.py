@@ -278,6 +278,16 @@ def check_mongodb():
     return (__grep_out_info(url, pattern))
 
 
+def check_spamassassin():
+    '''
+    Checks SpamAssassin stable version from the website
+    '''
+    url = sftw.STABLE_SPAMASSASSIN_URL
+    pattern = sftw.STABLE_SPAMASSASSIN_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False
