@@ -40,6 +40,7 @@ def main():
     print (("Dovecot:             %s" % (ver.check_dovecot())))
     print (("MongoDB:             %s" % (ver.check_mongodb())))
     print (("SpamAssassin:        %s" % (ver.check_spamassassin())))
+    print (("Consul:              %s" % (ver.check_consul())))
 
 
 def set_include_path():
