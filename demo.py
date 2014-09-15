@@ -41,6 +41,7 @@ def main():
     print (("MongoDB:             %s" % (ver.check_mongodb())))
     print (("SpamAssassin:        %s" % (ver.check_spamassassin())))
     print (("Consul:              %s" % (ver.check_consul())))
+    print (("MIMEDefang:          %s" % (ver.check_mimedefang())))
 
 
 def set_include_path():
