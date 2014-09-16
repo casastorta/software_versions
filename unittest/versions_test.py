@@ -139,6 +139,26 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_dovecot()) \
         )
 
+    def test_mongodb(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_mongodb()) \
+        )
+
+    def test_spamassassin(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_spamassassin()) \
+        )
+
+    def test_consul(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_consul()) \
+        )
+
+    def test_mimedefang(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_mimedefang()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):

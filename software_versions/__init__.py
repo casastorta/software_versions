@@ -114,6 +114,24 @@ STABLE_DOVECOT_PATTERN = \
     r'<h3>Stable releases</h3>.*?' \
     r'Download <a href="releases/.*?/dovecot-(.*?).tar.gz">'
 
+STABLE_MONGODB_URL = "http://www.mongodb.org/downloads"
+STABLE_MONGODB_PATTERN = \
+    r'<h2 class="release-version">Production Release \((.*?)\)'
+
+STABLE_SPAMASSASSIN_URL = "http://spamassassin.apache.org/downloads.cgi"
+STABLE_SPAMASSASSIN_PATTERN = \
+    r'<a name="Released_version_relversion" id="Released_version_relversion"' \
+    r'><h3>Released version, (.*?)</h3>'
+
+STABLE_CONSUL_URL = "http://www.consul.io/downloads.html"
+STABLE_CONSUL_PATTERN = \
+    r'Below are all available downloads for the latest version of Consul ' \
+    r'\((.*?)\)'
+
+STABLE_MIMEDEFANG_URL = "http://www.mimedefang.org/"
+STABLE_MIMEDEFANG_PATTERN = \
+    r'<span class="field-content">Release (.*?)</span>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -138,5 +156,9 @@ __all__ = [
     "STABLE_VARNISH_URL", "STABLE_VARNISH_PATTERN",
     "STABLE_CLAMAV_URL", "STABLE_CLAMAV_PATTERN",
     "STABLE_OPENSSH_URL", "STABLE_OPENSSH_PATTERN",
-    "STABLE_DOVECOT_URL", "STABLE_DOVECOT_PATTERN"
+    "STABLE_DOVECOT_URL", "STABLE_DOVECOT_PATTERN",
+    "STABLE_MONGODB_URL", "STABLE_MONGODB_PATTERN",
+    "STABLE_SPAMASSASSIN_URL", "STABLE_SPAMASSASSIN_PATTERN",
+    "STABLE_CONSUL_URL", "STABLE_CONSUL_PATTERN",
+    "STABLE_MIMEDEFANG_URL", "STABLE_MIMEDEFANG_PATTERN"
 ]

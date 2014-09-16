@@ -268,6 +268,46 @@ def check_dovecot():
     return (__grep_out_info(url, pattern))
 
 
+def check_mongodb():
+    '''
+    Checks MongoDB production version from the website
+    '''
+    url = sftw.STABLE_MONGODB_URL
+    pattern = sftw.STABLE_MONGODB_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_spamassassin():
+    '''
+    Checks SpamAssassin stable version from the website
+    '''
+    url = sftw.STABLE_SPAMASSASSIN_URL
+    pattern = sftw.STABLE_SPAMASSASSIN_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_consul():
+    '''
+    Checks Consul stable version from the website
+    '''
+    url = sftw.STABLE_CONSUL_URL
+    pattern = sftw.STABLE_CONSUL_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_mimedefang():
+    '''
+    Checks MIMEDefang stable version from the website
+    '''
+    url = sftw.STABLE_MIMEDEFANG_URL
+    pattern = sftw.STABLE_MIMEDEFANG_PATTERN
+
+    return (__grep_out_info(url, pattern, only_first=True))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False
