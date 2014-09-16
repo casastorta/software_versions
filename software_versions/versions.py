@@ -308,6 +308,16 @@ def check_mimedefang():
     return (__grep_out_info(url, pattern, only_first=True))
 
 
+def check_roundcube():
+    '''
+    Checks Roundcube stable version from the website
+    '''
+    url = sftw.STABLE_ROUNDCUBE_URL
+    pattern = sftw.STABLE_ROUNDCUBE_PATTERN
+
+    return (__grep_out_info(url, pattern, only_first=True))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False

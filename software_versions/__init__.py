@@ -132,6 +132,10 @@ STABLE_MIMEDEFANG_URL = "http://www.mimedefang.org/"
 STABLE_MIMEDEFANG_PATTERN = \
     r'<span class="field-content">Release (.*?)</span>'
 
+STABLE_ROUNDCUBE_URL = "http://roundcube.net/download/"
+STABLE_ROUNDCUBE_PATTERN = \
+    r'<td class="dlversion"><strong>Complete</Strong>: (.*?)</td>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",

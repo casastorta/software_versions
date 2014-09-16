@@ -42,6 +42,7 @@ def main():
     print (("SpamAssassin:        %s" % (ver.check_spamassassin())))
     print (("Consul:              %s" % (ver.check_consul())))
     print (("MIMEDefang:          %s" % (ver.check_mimedefang())))
+    print (("Roundcube:           %s" % (ver.check_roundcube())))
 
 
 def set_include_path():
