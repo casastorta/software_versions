@@ -164,6 +164,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_roundcube()) \
         )
 
+    def test_vagrant(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_vagrant()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
