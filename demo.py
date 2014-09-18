@@ -43,6 +43,7 @@ def main():
     print (("Consul:              %s" % (ver.check_consul())))
     print (("MIMEDefang:          %s" % (ver.check_mimedefang())))
     print (("Roundcube:           %s" % (ver.check_roundcube())))
+    print (("Vagrant:             %s" % (ver.check_vagrant())))
 
 
 def set_include_path():

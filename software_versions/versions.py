@@ -318,6 +318,16 @@ def check_roundcube():
     return (__grep_out_info(url, pattern, only_first=True))
 
 
+def check_vagrant():
+    '''
+    Checks Vagrant stable version from the website
+    '''
+    url = sftw.STABLE_VAGRANT_URL
+    pattern = sftw.STABLE_VAGRANT_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False
