@@ -44,6 +44,7 @@ def main():
     print (("MIMEDefang:          %s" % (ver.check_mimedefang())))
     print (("Roundcube:           %s" % (ver.check_roundcube())))
     print (("Vagrant:             %s" % (ver.check_vagrant())))
+    print (("HAProxy:             %s" % (ver.check_haproxy())))
 
 
 def set_include_path():

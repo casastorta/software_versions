@@ -141,6 +141,11 @@ STABLE_VAGRANT_PATTERN = \
     r'<p> Below are all available downloads for the latest version of ' \
     r'Vagrant \((.*?)\)'
 
+STABLE_HAPROXY_URL = "http://www.haproxy.org/#down"
+STABLE_HAPROXY_PATTERN = \
+    r'<td>.*?-stable</td>.*?' \
+    r'<td><a href="/download/.*?/src/haproxy-.*?.tar.gz">(.*?)</a></td>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
