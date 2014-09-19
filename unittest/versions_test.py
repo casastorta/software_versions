@@ -169,6 +169,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_vagrant()) \
         )
 
+    def test_haproxy(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_haproxy()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
