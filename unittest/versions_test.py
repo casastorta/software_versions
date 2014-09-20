@@ -174,6 +174,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_haproxy()) \
         )
 
+    def test_monit(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_monit()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
