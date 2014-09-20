@@ -45,6 +45,7 @@ def main():
     print (("Roundcube:           %s" % (ver.check_roundcube())))
     print (("Vagrant:             %s" % (ver.check_vagrant())))
     print (("HAProxy:             %s" % (ver.check_haproxy())))
+    print (("Monit:               %s" % (ver.check_monit())))
 
 
 def set_include_path():

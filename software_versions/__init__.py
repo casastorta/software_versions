@@ -146,6 +146,11 @@ STABLE_HAPROXY_PATTERN = \
     r'<td>.*?-stable</td>.*?' \
     r'<td><a href="/download/.*?/src/haproxy-.*?.tar.gz">(.*?)</a></td>'
 
+STABLE_MONIT_URL = "http://mmonit.com/monit/#download"
+STABLE_MONIT_PATTERN = \
+    r'<div class="col-sm-8 col-sm-offset-2">.*?' \
+    r'<h3>Monit (.*?) Downloads</h3>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -176,5 +181,6 @@ __all__ = [
     "STABLE_CONSUL_URL", "STABLE_CONSUL_PATTERN",
     "STABLE_MIMEDEFANG_URL", "STABLE_MIMEDEFANG_PATTERN",
     "STABLE_VAGRANT_URL", "STABLE_VAGRANT_PATTERN",
-    "STABLE_HAPROXY_URL", "STABLE_HAPROXY_PATTERN"
+    "STABLE_HAPROXY_URL", "STABLE_HAPROXY_PATTERN",
+    "STABLE_MONIT_URL", "STABLE_MONIT_PATTERN"
 ]
