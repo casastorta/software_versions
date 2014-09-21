@@ -179,6 +179,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_monit()) \
         )
 
+    def test_wordpress(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_wordpress()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
