@@ -46,6 +46,7 @@ def main():
     print (("Vagrant:             %s" % (ver.check_vagrant())))
     print (("HAProxy:             %s" % (ver.check_haproxy())))
     print (("Monit:               %s" % (ver.check_monit())))
+    print (("WordPress:           %s" % (ver.check_wordpress())))
 
 
 def set_include_path():

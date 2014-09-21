@@ -348,6 +348,16 @@ def check_monit():
     return (__grep_out_info(url, pattern))
 
 
+def check_wordpress():
+    '''
+    Checks WordPress stable version from the website
+    '''
+    url = sftw.STABLE_WORDPRESS_URL
+    pattern = sftw.STABLE_WORDPRESS_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False

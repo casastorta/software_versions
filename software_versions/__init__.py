@@ -151,6 +151,11 @@ STABLE_MONIT_PATTERN = \
     r'<div class="col-sm-8 col-sm-offset-2">.*?' \
     r'<h3>Monit (.*?) Downloads</h3>'
 
+STABLE_WORDPRESS_URL = "https://wordpress.org/download/"
+STABLE_WORDPRESS_PATTERN = \
+    r'<p class="intro">The latest stable release of WordPress ' \
+    r'\(Version (.*?)\)'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -182,5 +187,6 @@ __all__ = [
     "STABLE_MIMEDEFANG_URL", "STABLE_MIMEDEFANG_PATTERN",
     "STABLE_VAGRANT_URL", "STABLE_VAGRANT_PATTERN",
     "STABLE_HAPROXY_URL", "STABLE_HAPROXY_PATTERN",
-    "STABLE_MONIT_URL", "STABLE_MONIT_PATTERN"
+    "STABLE_MONIT_URL", "STABLE_MONIT_PATTERN",
+    "STABLE_WORDPRESS_URL", "STABLE_WORDPRESS_PATTERN"
 ]
