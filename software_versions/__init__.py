@@ -156,6 +156,13 @@ STABLE_WORDPRESS_PATTERN = \
     r'<p class="intro">The latest stable release of WordPress ' \
     r'\(Version (.*?)\)'
 
+STABLE_BACULA_URL = "http://sourceforge.net/projects/bacula/files/bacula/"
+STABLE_BACULA_PATTERN = \
+    r'<div id="files"><div class="download-bar">Looking for the latest ' \
+    r'version\? <strong>.*?' \
+    r'<a href="/projects/bacula/files/latest/download\?source=files" ' \
+    r'title="/bacula/.*?/bacula-(.*?).tar.gz'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -188,5 +195,6 @@ __all__ = [
     "STABLE_VAGRANT_URL", "STABLE_VAGRANT_PATTERN",
     "STABLE_HAPROXY_URL", "STABLE_HAPROXY_PATTERN",
     "STABLE_MONIT_URL", "STABLE_MONIT_PATTERN",
-    "STABLE_WORDPRESS_URL", "STABLE_WORDPRESS_PATTERN"
+    "STABLE_WORDPRESS_URL", "STABLE_WORDPRESS_PATTERN",
+    "STABLE_BACULA_URL", "STABLE_BACULA_PATTERN"
 ]

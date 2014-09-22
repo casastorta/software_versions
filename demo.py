@@ -47,6 +47,7 @@ def main():
     print (("HAProxy:             %s" % (ver.check_haproxy())))
     print (("Monit:               %s" % (ver.check_monit())))
     print (("WordPress:           %s" % (ver.check_wordpress())))
+    print (("Bacula:              %s" % (ver.check_bacula())))
 
 
 def set_include_path():
