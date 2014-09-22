@@ -184,6 +184,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_wordpress()) \
         )
 
+    def test_bacula(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_bacula()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
