@@ -64,7 +64,7 @@ STABLE_NGINX_PATTERN = \
 
 STABLE_MYSQL_URL = "http://www.mysql.com/downloads/mysql/"
 STABLE_MYSQL_PATTERN = \
-    r'<h1>MySQL Community Server (.*?)</h1>'
+    r'<h1>MySQL Community Server (.*?) </h1>'
 
 STABLE_PROFTPD_URL = "http://www.proftpd.org/"
 STABLE_PROFTPD_PATTERN = \
