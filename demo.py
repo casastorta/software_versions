@@ -48,6 +48,7 @@ def main():
     print (("Monit:               %s" % (ver.check_monit())))
     print (("WordPress:           %s" % (ver.check_wordpress())))
     print (("Bacula:              %s" % (ver.check_bacula())))
+    print (("Redis:               %s" % (ver.check_redis())))
 
 
 def set_include_path():

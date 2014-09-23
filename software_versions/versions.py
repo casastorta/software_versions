@@ -368,6 +368,16 @@ def check_bacula():
     return (__grep_out_info(url, pattern))
 
 
+def check_redis():
+    '''
+    Checks Redis stable version from the website
+    '''
+    url = sftw.STABLE_REDIS_URL
+    pattern = sftw.STABLE_REDIS_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False

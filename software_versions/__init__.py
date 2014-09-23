@@ -163,6 +163,11 @@ STABLE_BACULA_PATTERN = \
     r'<a href="/projects/bacula/files/latest/download\?source=files" ' \
     r'title="/bacula/.*?/bacula-(.*?).tar.gz'
 
+STABLE_REDIS_URL = "http://redis.io/download"
+STABLE_REDIS_PATTERN = \
+    r'<td>(.*?)</td>.*?' \
+    r'<td>Stable</td>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -196,5 +201,6 @@ __all__ = [
     "STABLE_HAPROXY_URL", "STABLE_HAPROXY_PATTERN",
     "STABLE_MONIT_URL", "STABLE_MONIT_PATTERN",
     "STABLE_WORDPRESS_URL", "STABLE_WORDPRESS_PATTERN",
-    "STABLE_BACULA_URL", "STABLE_BACULA_PATTERN"
+    "STABLE_BACULA_URL", "STABLE_BACULA_PATTERN",
+    "STABLE_REDIS_URL", "STABLE_REDIS_PATTERN"
 ]
