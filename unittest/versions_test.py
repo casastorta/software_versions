@@ -189,6 +189,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_bacula()) \
         )
 
+    def test_redis(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_redis()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
