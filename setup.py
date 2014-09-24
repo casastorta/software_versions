@@ -3,7 +3,7 @@
 from distutils.core import setup
 
 setup(name='software_versions',
-      version='1.1.0',
+      version='1.3.0',
       description='Python module for pulling latest software versions from '
            'the respective vendors\' web sites',
       author='Vedran Krivokuca',

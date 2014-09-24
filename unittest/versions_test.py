@@ -94,7 +94,7 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_vsftpd())
         )
 
-    def test_sednmailanalyzer(self):
+    def test_sendmailanalyzer(self):
         self.assertTrue(
             self.__test_version(ver.check_sendmailanalyzer())
         )
@@ -104,9 +104,94 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_django())
         )
 
-    def test_hpbios(self):
+    def test_stunnel(self):
         self.assertTrue( \
-            self.__test_version(ver.check_hpbios()) \
+            self.__test_version(ver.check_stunnel()) \
+        )
+
+    def test_pound(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_pound()) \
+        )
+
+    def test_linux(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_linux()) \
+        )
+
+    def test_varnish(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_varnish()) \
+        )
+
+    def test_clamav(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_clamav()) \
+        )
+
+    def test_openssh(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_openssh()) \
+        )
+
+    def test_dovecot(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_dovecot()) \
+        )
+
+    def test_mongodb(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_mongodb()) \
+        )
+
+    def test_spamassassin(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_spamassassin()) \
+        )
+
+    def test_consul(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_consul()) \
+        )
+
+    def test_mimedefang(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_mimedefang()) \
+        )
+
+    def test_roundcube(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_roundcube()) \
+        )
+
+    def test_vagrant(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_vagrant()) \
+        )
+
+    def test_haproxy(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_haproxy()) \
+        )
+
+    def test_monit(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_monit()) \
+        )
+
+    def test_wordpress(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_wordpress()) \
+        )
+
+    def test_bacula(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_bacula()) \
+        )
+
+    def test_redis(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_redis()) \
         )
 
     def __test_version(self, input_values=None):

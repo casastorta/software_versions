@@ -34,7 +34,7 @@ STABLE_SQUID_PATTERN = \
 
 STABLE_CANIT_URL = "http://roaringpenguin.com/news"
 STABLE_CANIT_PATTERN = \
-    r'<a href.*?>CanIt (.*?) '
+    r'>Roaring Penguin Software releases CanIt (.*?)<'
 
 STABLE_PSQL_URL = "http://www.postgresql.org/versions.rss"
 STABLE_PSQL_PATTERN = \
@@ -64,7 +64,7 @@ STABLE_NGINX_PATTERN = \
 
 STABLE_MYSQL_URL = "http://www.mysql.com/downloads/mysql/"
 STABLE_MYSQL_PATTERN = \
-    r'<h1>MySQL Community Server (.*?)</h1>'
+    r'<h1>MySQL Community Server (.*?) </h1>'
 
 STABLE_PROFTPD_URL = "http://www.proftpd.org/"
 STABLE_PROFTPD_PATTERN = \
@@ -83,12 +83,90 @@ STABLE_DJANGO_URL = "https://www.djangoproject.com/download/"
 STABLE_DJANGO_PATTERN = \
     r'<p>The latest official version is (.*?).</p>'
 
-STABLE_HPBIOS_URL = \
-    "http://forum.notebookreview.com/hp-business-class-notebooks/" \
-    "601489-current-hp-business-bios-releases.html"
-STABLE_HPBIOS_PATTERN = \
-    '<br>8560p</font></strong></td><td style="border: 1px solid #000000; ' \
-    'width: 75px;" valign="top">(.*?)</td>'
+STABLE_STUNNEL_URL = "https://www.stunnel.org/downloads.html"
+STABLE_STUNNEL_PATTERN = \
+    r'<td><a href="downloads/stunnel-.*?.tar.gz">stunnel-(.*?).tar.gz</a></td>'
+
+STABLE_POUND_URL = "http://www.apsis.ch/pound/"
+STABLE_POUND_PATTERN = \
+    r'Download the latest version <a .*?>Pound-(.*?).tgz</a>'
+
+STABLE_LINUX_URL = "http://www.kernel.org/"
+STABLE_LINUX_PATTERN = \
+    r'<td id="latest_link">.*?' \
+    r'<a href="./pub/linux/kernel/v3.x/linux-.*?.tar.xz">(.*?)</a>'
+
+STABLE_VARNISH_URL = "https://www.varnish-cache.org/releases"
+STABLE_VARNISH_PATTERN = \
+    r'<h2 class="pane-title">Current supported releases</h2>.*?' \
+    r'<a href="/content/varnish-cache-.*?">Varnish Cache (.*?)</a>'
+
+STABLE_CLAMAV_URL = "http://www.clamav.net/download.html"
+STABLE_CLAMAV_PATTERN = \
+    r'<h3>The latest stable release is <strong>(.*?)</strong></h3>'
+
+STABLE_OPENSSH_URL = "http://www.openssh.com/"
+STABLE_OPENSSH_PATTERN = \
+    r'<a href="txt/release-.*?">OpenSSH (.*?)</a> released'
+
+STABLE_DOVECOT_URL = "http://www.dovecot.org/download.html"
+STABLE_DOVECOT_PATTERN = \
+    r'<h3>Stable releases</h3>.*?' \
+    r'Download <a href="releases/.*?/dovecot-(.*?).tar.gz">'
+
+STABLE_MONGODB_URL = "http://www.mongodb.org/downloads"
+STABLE_MONGODB_PATTERN = \
+    r'<h2 class="release-version">Production Release \((.*?)\)'
+
+STABLE_SPAMASSASSIN_URL = "http://spamassassin.apache.org/downloads.cgi"
+STABLE_SPAMASSASSIN_PATTERN = \
+    r'<a name="Released_version_relversion" id="Released_version_relversion"' \
+    r'><h3>Released version, (.*?)</h3>'
+
+STABLE_CONSUL_URL = "http://www.consul.io/downloads.html"
+STABLE_CONSUL_PATTERN = \
+    r'Below are all available downloads for the latest version of Consul ' \
+    r'\((.*?)\)'
+
+STABLE_MIMEDEFANG_URL = "http://www.mimedefang.org/"
+STABLE_MIMEDEFANG_PATTERN = \
+    r'<span class="field-content">Release (.*?)</span>'
+
+STABLE_ROUNDCUBE_URL = "http://roundcube.net/download/"
+STABLE_ROUNDCUBE_PATTERN = \
+    r'<td class="dlversion"><strong>Complete</Strong>: (.*?)</td>'
+
+STABLE_VAGRANT_URL = "http://www.vagrantup.com/downloads.html"
+STABLE_VAGRANT_PATTERN = \
+    r'<p> Below are all available downloads for the latest version of ' \
+    r'Vagrant \((.*?)\)'
+
+STABLE_HAPROXY_URL = "http://www.haproxy.org/#down"
+STABLE_HAPROXY_PATTERN = \
+    r'<td>.*?-stable</td>.*?' \
+    r'<td><a href="/download/.*?/src/haproxy-.*?.tar.gz">(.*?)</a></td>'
+
+STABLE_MONIT_URL = "http://mmonit.com/monit/#download"
+STABLE_MONIT_PATTERN = \
+    r'<div class="col-sm-8 col-sm-offset-2">.*?' \
+    r'<h3>Monit (.*?) Downloads</h3>'
+
+STABLE_WORDPRESS_URL = "https://wordpress.org/download/"
+STABLE_WORDPRESS_PATTERN = \
+    r'<p class="intro">The latest stable release of WordPress ' \
+    r'\(Version (.*?)\)'
+
+STABLE_BACULA_URL = "http://sourceforge.net/projects/bacula/files/bacula/"
+STABLE_BACULA_PATTERN = \
+    r'<div id="files"><div class="download-bar">Looking for the latest ' \
+    r'version\? <strong>.*?' \
+    r'<a href="/projects/bacula/files/latest/download\?source=files" ' \
+    r'title="/bacula/.*?/bacula-(.*?).tar.gz'
+
+STABLE_REDIS_URL = "http://redis.io/download"
+STABLE_REDIS_PATTERN = \
+    r'<td>(.*?)</td>.*?' \
+    r'<td>Stable</td>'
 
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
@@ -108,5 +186,21 @@ __all__ = [
     "STABLE_VSFTPD_URL", "STABLE_VSFTPD_PATTERN",
     "STABLE_SENDMAILANALYZER_URL", "STABLE_SENDMAILANALYZER_PATTERN",
     "STABLE_DJANGO_URL", "STABLE_DJANGO_PATTERN",
-    "STABLE_HPBIOS_URL", "STABLE_HPBIOS_PATTERN"
+    "STABLE_STUNNEL_URL", "STABLE_STUNNEL_PATTERN",
+    "STABLE_POUND_URL", "STABLE_POUND_PATTERN",
+    "STABLE_LINUX_URL", "STABLE_LINUX_PATTERN",
+    "STABLE_VARNISH_URL", "STABLE_VARNISH_PATTERN",
+    "STABLE_CLAMAV_URL", "STABLE_CLAMAV_PATTERN",
+    "STABLE_OPENSSH_URL", "STABLE_OPENSSH_PATTERN",
+    "STABLE_DOVECOT_URL", "STABLE_DOVECOT_PATTERN",
+    "STABLE_MONGODB_URL", "STABLE_MONGODB_PATTERN",
+    "STABLE_SPAMASSASSIN_URL", "STABLE_SPAMASSASSIN_PATTERN",
+    "STABLE_CONSUL_URL", "STABLE_CONSUL_PATTERN",
+    "STABLE_MIMEDEFANG_URL", "STABLE_MIMEDEFANG_PATTERN",
+    "STABLE_VAGRANT_URL", "STABLE_VAGRANT_PATTERN",
+    "STABLE_HAPROXY_URL", "STABLE_HAPROXY_PATTERN",
+    "STABLE_MONIT_URL", "STABLE_MONIT_PATTERN",
+    "STABLE_WORDPRESS_URL", "STABLE_WORDPRESS_PATTERN",
+    "STABLE_BACULA_URL", "STABLE_BACULA_PATTERN",
+    "STABLE_REDIS_URL", "STABLE_REDIS_PATTERN"
 ]

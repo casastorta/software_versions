@@ -85,7 +85,7 @@ def check_canit():
     url = sftw.STABLE_CANIT_URL
     pattern = sftw.STABLE_CANIT_PATTERN
 
-    return (__grep_out_info(url, pattern))
+    return (__grep_out_info(url, pattern, only_first=True))
 
 
 def check_postgresql():
@@ -198,12 +198,182 @@ def check_django():
     return (__grep_out_info(url, pattern))
 
 
-def check_hpbios():
+def check_stunnel():
     '''
-    Checks latest HP 8560p BIOS version from unofficial website
+    Checks stunnel stable version from the website
     '''
-    url = sftw.STABLE_HPBIOS_URL
-    pattern = sftw.STABLE_HPBIOS_PATTERN
+    url = sftw.STABLE_STUNNEL_URL
+    pattern = sftw.STABLE_STUNNEL_PATTERN
+
+    return (__grep_out_info(url, pattern, only_first=True))
+
+
+def check_pound():
+    '''
+    Checks Pound stable version from the website
+    '''
+    url = sftw.STABLE_POUND_URL
+    pattern = sftw.STABLE_POUND_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_linux():
+    '''
+    Checks Linux kernel stable version from the website
+    '''
+    url = sftw.STABLE_LINUX_URL
+    pattern = sftw.STABLE_LINUX_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_varnish():
+    '''
+    Checks Varnish stable version from the website
+    '''
+    url = sftw.STABLE_VARNISH_URL
+    pattern = sftw.STABLE_VARNISH_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_clamav():
+    '''
+    Checks ClamAV stable version from the website
+    '''
+    url = sftw.STABLE_CLAMAV_URL
+    pattern = sftw.STABLE_CLAMAV_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_openssh():
+    '''
+    Checks OpenSSH stable version from the website
+    '''
+    url = sftw.STABLE_OPENSSH_URL
+    pattern = sftw.STABLE_OPENSSH_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_dovecot():
+    '''
+    Checks Dovecot stable version from the website
+    '''
+    url = sftw.STABLE_DOVECOT_URL
+    pattern = sftw.STABLE_DOVECOT_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_mongodb():
+    '''
+    Checks MongoDB production version from the website
+    '''
+    url = sftw.STABLE_MONGODB_URL
+    pattern = sftw.STABLE_MONGODB_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_spamassassin():
+    '''
+    Checks SpamAssassin stable version from the website
+    '''
+    url = sftw.STABLE_SPAMASSASSIN_URL
+    pattern = sftw.STABLE_SPAMASSASSIN_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_consul():
+    '''
+    Checks Consul stable version from the website
+    '''
+    url = sftw.STABLE_CONSUL_URL
+    pattern = sftw.STABLE_CONSUL_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_mimedefang():
+    '''
+    Checks MIMEDefang stable version from the website
+    '''
+    url = sftw.STABLE_MIMEDEFANG_URL
+    pattern = sftw.STABLE_MIMEDEFANG_PATTERN
+
+    return (__grep_out_info(url, pattern, only_first=True))
+
+
+def check_roundcube():
+    '''
+    Checks Roundcube stable version from the website
+    '''
+    url = sftw.STABLE_ROUNDCUBE_URL
+    pattern = sftw.STABLE_ROUNDCUBE_PATTERN
+
+    return (__grep_out_info(url, pattern, only_first=True))
+
+
+def check_vagrant():
+    '''
+    Checks Vagrant stable version from the website
+    '''
+    url = sftw.STABLE_VAGRANT_URL
+    pattern = sftw.STABLE_VAGRANT_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_haproxy():
+    '''
+    Checks HAProxy stable version from the website
+    '''
+    url = sftw.STABLE_HAPROXY_URL
+    pattern = sftw.STABLE_HAPROXY_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_monit():
+    '''
+    Checks Monit stable version from the website
+    '''
+    url = sftw.STABLE_MONIT_URL
+    pattern = sftw.STABLE_MONIT_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_wordpress():
+    '''
+    Checks WordPress stable version from the website
+    '''
+    url = sftw.STABLE_WORDPRESS_URL
+    pattern = sftw.STABLE_WORDPRESS_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_bacula():
+    '''
+    Checks Bacula stable version from the website
+    '''
+    url = sftw.STABLE_BACULA_URL
+    pattern = sftw.STABLE_BACULA_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_redis():
+    '''
+    Checks Redis stable version from the website
+    '''
+    url = sftw.STABLE_REDIS_URL
+    pattern = sftw.STABLE_REDIS_PATTERN
 
     return (__grep_out_info(url, pattern))
 
