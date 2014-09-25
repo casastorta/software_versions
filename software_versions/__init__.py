@@ -168,6 +168,11 @@ STABLE_REDIS_PATTERN = \
     r'<td>(.*?)</td>.*?' \
     r'<td>Stable</td>'
 
+STABLE_UNBOUND_URL = "http://unbound.net/download.html"
+STABLE_UNBOUND_PATTERN = \
+    r'<h2>Unbound Downloads</h2>.*?' \
+    r'The latest version of unbound \(currently (.*?)\)'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -202,5 +207,6 @@ __all__ = [
     "STABLE_MONIT_URL", "STABLE_MONIT_PATTERN",
     "STABLE_WORDPRESS_URL", "STABLE_WORDPRESS_PATTERN",
     "STABLE_BACULA_URL", "STABLE_BACULA_PATTERN",
-    "STABLE_REDIS_URL", "STABLE_REDIS_PATTERN"
+    "STABLE_REDIS_URL", "STABLE_REDIS_PATTERN",
+    "STABLE_UNBOUND_URL", "STABLE_UNBOUND_PATTERN"
 ]

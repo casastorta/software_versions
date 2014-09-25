@@ -49,6 +49,7 @@ def main():
     print (("WordPress:           %s" % (ver.check_wordpress())))
     print (("Bacula:              %s" % (ver.check_bacula())))
     print (("Redis:               %s" % (ver.check_redis())))
+    print (("unbound:             %s" % (ver.check_unbound())))
 
 
 def set_include_path():
