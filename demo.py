@@ -50,6 +50,7 @@ def main():
     print (("Bacula:              %s" % (ver.check_bacula())))
     print (("Redis:               %s" % (ver.check_redis())))
     print (("unbound:             %s" % (ver.check_unbound())))
+    print (("SOGo:                %s" % (ver.check_sogo())))
 
 
 def set_include_path():

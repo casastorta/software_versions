@@ -388,6 +388,16 @@ def check_unbound():
     return (__grep_out_info(url, pattern))
 
 
+def check_sogo():
+    '''
+    Checks SOGo stable version from the website
+    '''
+    url = sftw.STABLE_SOGO_URL
+    pattern = sftw.STABLE_SOGO_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False

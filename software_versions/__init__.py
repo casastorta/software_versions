@@ -173,6 +173,11 @@ STABLE_UNBOUND_PATTERN = \
     r'<h2>Unbound Downloads</h2>.*?' \
     r'The latest version of unbound \(currently (.*?)\)'
 
+STABLE_SOGO_URL = "http://www.sogo.nu/downloads/backend.html"
+STABLE_SOGO_PATTERN = \
+    r'<h2>Source Code</h2>.*?' \
+    r'id="downbutton">.*?SOGo-(.*?).tar.gz</a><br/>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -208,5 +213,6 @@ __all__ = [
     "STABLE_WORDPRESS_URL", "STABLE_WORDPRESS_PATTERN",
     "STABLE_BACULA_URL", "STABLE_BACULA_PATTERN",
     "STABLE_REDIS_URL", "STABLE_REDIS_PATTERN",
-    "STABLE_UNBOUND_URL", "STABLE_UNBOUND_PATTERN"
+    "STABLE_UNBOUND_URL", "STABLE_UNBOUND_PATTERN",
+    "STABLE_SOGO_URL", "STABLE_SOGO_PATTERN"
 ]
