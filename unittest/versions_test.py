@@ -199,6 +199,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_unbound()) \
         )
 
+    def test_sogo(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_sogo()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
