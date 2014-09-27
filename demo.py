@@ -51,6 +51,7 @@ def main():
     print (("Redis:               %s" % (ver.check_redis())))
     print (("unbound:             %s" % (ver.check_unbound())))
     print (("SOGo:                %s" % (ver.check_sogo())))
+    print (("CouchDB:             %s" % (ver.check_couchdb())))
 
 
 def set_include_path():
