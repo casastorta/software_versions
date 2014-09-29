@@ -209,6 +209,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_couchdb()) \
         )
 
+    def test_owncloud(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_owncloud()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
