@@ -52,6 +52,7 @@ def main():
     print (("unbound:             %s" % (ver.check_unbound())))
     print (("SOGo:                %s" % (ver.check_sogo())))
     print (("CouchDB:             %s" % (ver.check_couchdb())))
+    print (("ownCloud:            %s" % (ver.check_owncloud())))
 
 
 def set_include_path():

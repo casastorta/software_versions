@@ -183,6 +183,11 @@ STABLE_COUCHDB_PATTERN = \
     r'<div class="wrap download-pane">.*?' \
     r'<h2 class="icon icon-download">Download CouchDB (.*?)</h2>'
 
+STABLE_OWNCLOUD_URL = "https://owncloud.org/install/"
+STABLE_OWNCLOUD_PATTERN = \
+    r'<h3><strong>Install ownCloud Server</strong>.*?' \
+    r'<p>Latest stable version: (.*?)\s\('
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -220,5 +225,6 @@ __all__ = [
     "STABLE_REDIS_URL", "STABLE_REDIS_PATTERN",
     "STABLE_UNBOUND_URL", "STABLE_UNBOUND_PATTERN",
     "STABLE_SOGO_URL", "STABLE_SOGO_PATTERN",
-    "STABLE_COUCHDB_URL", "STABLE_COUCHDB_PATTERN"
+    "STABLE_COUCHDB_URL", "STABLE_COUCHDB_PATTERN",
+    "STABLE_OWNCLOUD_URL", "STABLE_OWNCLOUD_PATTERN"
 ]
