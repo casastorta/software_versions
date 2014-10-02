@@ -53,6 +53,7 @@ def main():
     print (("SOGo:                %s" % (ver.check_sogo())))
     print (("CouchDB:             %s" % (ver.check_couchdb())))
     print (("ownCloud:            %s" % (ver.check_owncloud())))
+    print (("OpenSMTPD:           %s" % (ver.check_opensmtpd())))
 
 
 def set_include_path():

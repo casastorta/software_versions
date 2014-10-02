@@ -188,6 +188,10 @@ STABLE_OWNCLOUD_PATTERN = \
     r'<h3><strong>Install ownCloud Server</strong>.*?' \
     r'<p>Latest stable version: (.*?)\s\('
 
+STABLE_OPENSMTPD_URL = "https://opensmtpd.org/"
+STABLE_OPENSMTPD_PATTERN = \
+    r'<a href="/announces/release-.*?.txt">OpenSMTPD (.*?)</a> released'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -226,5 +230,6 @@ __all__ = [
     "STABLE_UNBOUND_URL", "STABLE_UNBOUND_PATTERN",
     "STABLE_SOGO_URL", "STABLE_SOGO_PATTERN",
     "STABLE_COUCHDB_URL", "STABLE_COUCHDB_PATTERN",
-    "STABLE_OWNCLOUD_URL", "STABLE_OWNCLOUD_PATTERN"
+    "STABLE_OWNCLOUD_URL", "STABLE_OWNCLOUD_PATTERN",
+    "STABLE_OPENSMTPD_URL", "STABLE_OPENSMTPD_PATTERN"
 ]
