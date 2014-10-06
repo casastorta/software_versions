@@ -54,6 +54,7 @@ def main():
     print (("CouchDB:             %s" % (ver.check_couchdb())))
     print (("ownCloud:            %s" % (ver.check_owncloud())))
     print (("OpenSMTPD:           %s" % (ver.check_opensmtpd())))
+    print (("PHP:                 %s" % (ver.check_php())))
 
 
 def set_include_path():

@@ -192,6 +192,12 @@ STABLE_OPENSMTPD_URL = "https://opensmtpd.org/"
 STABLE_OPENSMTPD_PATTERN = \
     r'<a href="/announces/release-.*?.txt">OpenSMTPD (.*?)</a> released'
 
+STABLE_PHP_URL = "http://php.net/"
+STABLE_PHP_PATTERN = \
+    r"<li><a class='download-link' href='/downloads.php#v.*?'>(.*?)</a>" \
+    r"<span class='dot'>&middot;</span><a class='notes' " \
+    r"href='/ChangeLog-5.php#.*?'>Release Notes</a></li>"
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -231,5 +237,6 @@ __all__ = [
     "STABLE_SOGO_URL", "STABLE_SOGO_PATTERN",
     "STABLE_COUCHDB_URL", "STABLE_COUCHDB_PATTERN",
     "STABLE_OWNCLOUD_URL", "STABLE_OWNCLOUD_PATTERN",
-    "STABLE_OPENSMTPD_URL", "STABLE_OPENSMTPD_PATTERN"
+    "STABLE_OPENSMTPD_URL", "STABLE_OPENSMTPD_PATTERN",
+    "STABLE_PHP_URL", "STABLE_PHP_PATTERN"
 ]
