@@ -125,8 +125,9 @@ STABLE_SPAMASSASSIN_PATTERN = \
 
 STABLE_CONSUL_URL = "http://www.consul.io/downloads.html"
 STABLE_CONSUL_PATTERN = \
-    r'Below are all available downloads for the latest version of Consul ' \
-    r'\((.*?)\)'
+    r'<h2 class="os-name">Linux</h2>.*?' \
+    r'<li><a href="https://dl.bintray.com/mitchellh/consul/' \
+    r'(.*?)_linux_386.zip">32-bit</a></li>'
 
 STABLE_MIMEDEFANG_URL = "http://www.mimedefang.org/"
 STABLE_MIMEDEFANG_PATTERN = \
