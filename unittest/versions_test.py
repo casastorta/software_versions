@@ -159,6 +159,71 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_mimedefang()) \
         )
 
+    def test_roundcube(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_roundcube()) \
+        )
+
+    def test_vagrant(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_vagrant()) \
+        )
+
+    def test_haproxy(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_haproxy()) \
+        )
+
+    def test_monit(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_monit()) \
+        )
+
+    def test_wordpress(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_wordpress()) \
+        )
+
+    def test_bacula(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_bacula()) \
+        )
+
+    def test_redis(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_redis()) \
+        )
+
+    def test_unbound(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_unbound()) \
+        )
+
+    def test_sogo(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_sogo()) \
+        )
+
+    def test_couchdb(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_couchdb()) \
+        )
+
+    def test_owncloud(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_owncloud()) \
+        )
+
+    def test_opensmtpd(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_opensmtpd()) \
+        )
+
+    def test_php(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_php()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):

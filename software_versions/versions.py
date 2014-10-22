@@ -308,6 +308,136 @@ def check_mimedefang():
     return (__grep_out_info(url, pattern, only_first=True))
 
 
+def check_roundcube():
+    '''
+    Checks Roundcube stable version from the website
+    '''
+    url = sftw.STABLE_ROUNDCUBE_URL
+    pattern = sftw.STABLE_ROUNDCUBE_PATTERN
+
+    return (__grep_out_info(url, pattern, only_first=True))
+
+
+def check_vagrant():
+    '''
+    Checks Vagrant stable version from the website
+    '''
+    url = sftw.STABLE_VAGRANT_URL
+    pattern = sftw.STABLE_VAGRANT_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_haproxy():
+    '''
+    Checks HAProxy stable version from the website
+    '''
+    url = sftw.STABLE_HAPROXY_URL
+    pattern = sftw.STABLE_HAPROXY_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_monit():
+    '''
+    Checks Monit stable version from the website
+    '''
+    url = sftw.STABLE_MONIT_URL
+    pattern = sftw.STABLE_MONIT_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_wordpress():
+    '''
+    Checks WordPress stable version from the website
+    '''
+    url = sftw.STABLE_WORDPRESS_URL
+    pattern = sftw.STABLE_WORDPRESS_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_bacula():
+    '''
+    Checks Bacula stable version from the website
+    '''
+    url = sftw.STABLE_BACULA_URL
+    pattern = sftw.STABLE_BACULA_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_redis():
+    '''
+    Checks Redis stable version from the website
+    '''
+    url = sftw.STABLE_REDIS_URL
+    pattern = sftw.STABLE_REDIS_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_unbound():
+    '''
+    Checks unbound stable version from the website
+    '''
+    url = sftw.STABLE_UNBOUND_URL
+    pattern = sftw.STABLE_UNBOUND_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_sogo():
+    '''
+    Checks SOGo stable version from the website
+    '''
+    url = sftw.STABLE_SOGO_URL
+    pattern = sftw.STABLE_SOGO_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_couchdb():
+    '''
+    Checks CouchDB stable version from the website
+    '''
+    url = sftw.STABLE_COUCHDB_URL
+    pattern = sftw.STABLE_COUCHDB_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_owncloud():
+    '''
+    Checks ownCloud stable version from the website
+    '''
+    url = sftw.STABLE_OWNCLOUD_URL
+    pattern = sftw.STABLE_OWNCLOUD_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_opensmtpd():
+    '''
+    Checks OpenSMTPD stable version from the website
+    '''
+    url = sftw.STABLE_OPENSMTPD_URL
+    pattern = sftw.STABLE_OPENSMTPD_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_php():
+    '''
+    Checks PHP stable version from the website
+    '''
+    url = sftw.STABLE_PHP_URL
+    pattern = sftw.STABLE_PHP_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False

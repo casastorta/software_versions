@@ -64,7 +64,7 @@ STABLE_NGINX_PATTERN = \
 
 STABLE_MYSQL_URL = "http://www.mysql.com/downloads/mysql/"
 STABLE_MYSQL_PATTERN = \
-    r'<h1>MySQL Community Server (.*?)</h1>'
+    r'<h1>MySQL Community Server (.*?)\s</h1>'
 
 STABLE_PROFTPD_URL = "http://www.proftpd.org/"
 STABLE_PROFTPD_PATTERN = \
@@ -125,12 +125,79 @@ STABLE_SPAMASSASSIN_PATTERN = \
 
 STABLE_CONSUL_URL = "http://www.consul.io/downloads.html"
 STABLE_CONSUL_PATTERN = \
-    r'Below are all available downloads for the latest version of Consul ' \
-    r'\((.*?)\)'
+    r'<h2 class="os-name">Linux</h2>.*?' \
+    r'<li><a href="https://dl.bintray.com/mitchellh/consul/' \
+    r'(.*?)_linux_386.zip">32-bit</a></li>'
 
 STABLE_MIMEDEFANG_URL = "http://www.mimedefang.org/"
 STABLE_MIMEDEFANG_PATTERN = \
     r'<span class="field-content">Release (.*?)</span>'
+
+STABLE_ROUNDCUBE_URL = "http://roundcube.net/download/"
+STABLE_ROUNDCUBE_PATTERN = \
+    r'<td class="dlversion"><strong>Complete</Strong>: (.*?)</td>'
+
+STABLE_VAGRANT_URL = "http://www.vagrantup.com/downloads.html"
+STABLE_VAGRANT_PATTERN = \
+    r'<p> Below are all available downloads for the latest version of ' \
+    r'Vagrant \((.*?)\)'
+
+STABLE_HAPROXY_URL = "http://www.haproxy.org/#down"
+STABLE_HAPROXY_PATTERN = \
+    r'<td>.*?-stable</td>.*?' \
+    r'<td><a href="/download/.*?/src/haproxy-.*?.tar.gz">(.*?)</a></td>'
+
+STABLE_MONIT_URL = "http://mmonit.com/monit/#download"
+STABLE_MONIT_PATTERN = \
+    r'<div class="col-sm-8 col-sm-offset-2">.*?' \
+    r'<h3>Monit (.*?) Downloads</h3>'
+
+STABLE_WORDPRESS_URL = "https://wordpress.org/download/"
+STABLE_WORDPRESS_PATTERN = \
+    r'<p class="intro">The latest stable release of WordPress ' \
+    r'\(Version (.*?)\)'
+
+STABLE_BACULA_URL = "http://sourceforge.net/projects/bacula/files/bacula/"
+STABLE_BACULA_PATTERN = \
+    r'<div id="files"><div class="download-bar">Looking for the latest ' \
+    r'version\? <strong>.*?' \
+    r'<a href="/projects/bacula/files/latest/download\?source=files" ' \
+    r'title="/bacula/.*?/bacula-(.*?).tar.gz'
+
+STABLE_REDIS_URL = "http://redis.io/download"
+STABLE_REDIS_PATTERN = \
+    r'<td>(.*?)</td>.*?' \
+    r'<td>Stable</td>'
+
+STABLE_UNBOUND_URL = "http://unbound.net/download.html"
+STABLE_UNBOUND_PATTERN = \
+    r'<h2>Unbound Downloads</h2>.*?' \
+    r'The latest version of unbound \(currently (.*?)\)'
+
+STABLE_SOGO_URL = "http://www.sogo.nu/downloads/backend.html"
+STABLE_SOGO_PATTERN = \
+    r'<h2>Source Code</h2>.*?' \
+    r'id="downbutton">.*?SOGo-(.*?).tar.gz</a><br/>'
+
+STABLE_COUCHDB_URL = "http://couchdb.apache.org/"
+STABLE_COUCHDB_PATTERN = \
+    r'<div class="wrap download-pane">.*?' \
+    r'<h2 class="icon icon-download">Download CouchDB (.*?)</h2>'
+
+STABLE_OWNCLOUD_URL = "https://owncloud.org/install/"
+STABLE_OWNCLOUD_PATTERN = \
+    r'<h3><strong>Install ownCloud Server</strong>.*?' \
+    r'<p>Latest stable version: (.*?)\s\('
+
+STABLE_OPENSMTPD_URL = "https://opensmtpd.org/"
+STABLE_OPENSMTPD_PATTERN = \
+    r'<a href="/announces/release-.*?.txt">OpenSMTPD (.*?)</a> released'
+
+STABLE_PHP_URL = "http://php.net/"
+STABLE_PHP_PATTERN = \
+    r"<li><a class='download-link' href='/downloads.php#v.*?'>(.*?)</a>" \
+    r"<span class='dot'>&middot;</span><a class='notes' " \
+    r"href='/ChangeLog-5.php#.*?'>Release Notes</a></li>"
 
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
@@ -160,5 +227,17 @@ __all__ = [
     "STABLE_MONGODB_URL", "STABLE_MONGODB_PATTERN",
     "STABLE_SPAMASSASSIN_URL", "STABLE_SPAMASSASSIN_PATTERN",
     "STABLE_CONSUL_URL", "STABLE_CONSUL_PATTERN",
-    "STABLE_MIMEDEFANG_URL", "STABLE_MIMEDEFANG_PATTERN"
+    "STABLE_MIMEDEFANG_URL", "STABLE_MIMEDEFANG_PATTERN",
+    "STABLE_VAGRANT_URL", "STABLE_VAGRANT_PATTERN",
+    "STABLE_HAPROXY_URL", "STABLE_HAPROXY_PATTERN",
+    "STABLE_MONIT_URL", "STABLE_MONIT_PATTERN",
+    "STABLE_WORDPRESS_URL", "STABLE_WORDPRESS_PATTERN",
+    "STABLE_BACULA_URL", "STABLE_BACULA_PATTERN",
+    "STABLE_REDIS_URL", "STABLE_REDIS_PATTERN",
+    "STABLE_UNBOUND_URL", "STABLE_UNBOUND_PATTERN",
+    "STABLE_SOGO_URL", "STABLE_SOGO_PATTERN",
+    "STABLE_COUCHDB_URL", "STABLE_COUCHDB_PATTERN",
+    "STABLE_OWNCLOUD_URL", "STABLE_OWNCLOUD_PATTERN",
+    "STABLE_OPENSMTPD_URL", "STABLE_OPENSMTPD_PATTERN",
+    "STABLE_PHP_URL", "STABLE_PHP_PATTERN"
 ]

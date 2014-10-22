@@ -42,6 +42,19 @@ def main():
     print (("SpamAssassin:        %s" % (ver.check_spamassassin())))
     print (("Consul:              %s" % (ver.check_consul())))
     print (("MIMEDefang:          %s" % (ver.check_mimedefang())))
+    print (("Roundcube:           %s" % (ver.check_roundcube())))
+    print (("Vagrant:             %s" % (ver.check_vagrant())))
+    print (("HAProxy:             %s" % (ver.check_haproxy())))
+    print (("Monit:               %s" % (ver.check_monit())))
+    print (("WordPress:           %s" % (ver.check_wordpress())))
+    print (("Bacula:              %s" % (ver.check_bacula())))
+    print (("Redis:               %s" % (ver.check_redis())))
+    print (("unbound:             %s" % (ver.check_unbound())))
+    print (("SOGo:                %s" % (ver.check_sogo())))
+    print (("CouchDB:             %s" % (ver.check_couchdb())))
+    print (("ownCloud:            %s" % (ver.check_owncloud())))
+    print (("OpenSMTPD:           %s" % (ver.check_opensmtpd())))
+    print (("PHP:                 %s" % (ver.check_php())))
 
 
 def set_include_path():
