@@ -224,6 +224,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_php()) \
         )
 
+    def test_cassandra(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_cassandra()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
