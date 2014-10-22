@@ -55,6 +55,7 @@ def main():
     print (("ownCloud:            %s" % (ver.check_owncloud())))
     print (("OpenSMTPD:           %s" % (ver.check_opensmtpd())))
     print (("PHP:                 %s" % (ver.check_php())))
+    print (("Cassandra:           %s" % (ver.check_cassandra())))
 
 
 def set_include_path():
