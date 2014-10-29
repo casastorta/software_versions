@@ -203,6 +203,11 @@ STABLE_CASSANDRA_URL = "http://cassandra.apache.org"
 STABLE_CASSANDRA_PATTERN = \
     r'The latest release is <b>(.*?)</b>'
 
+STABLE_COBBLER_URL = "http://www.cobblerd.org/"
+STABLE_COBBLER_PATTERN = \
+    r'<div class="header">Latest Version:</div>.*?' \
+    r'<div class="version">(.*?)</div>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -244,5 +249,6 @@ __all__ = [
     "STABLE_OWNCLOUD_URL", "STABLE_OWNCLOUD_PATTERN",
     "STABLE_OPENSMTPD_URL", "STABLE_OPENSMTPD_PATTERN",
     "STABLE_PHP_URL", "STABLE_PHP_PATTERN",
-    "STABLE_CASSANDRA_URL", "STABLE_CASSANDRA_PATTERN"
+    "STABLE_CASSANDRA_URL", "STABLE_CASSANDRA_PATTERN",
+    "STABLE_COBBLER_URL", "STABLE_COBBLER_PATTERN"
 ]

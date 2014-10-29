@@ -56,6 +56,7 @@ def main():
     print (("OpenSMTPD:           %s" % (ver.check_opensmtpd())))
     print (("PHP:                 %s" % (ver.check_php())))
     print (("Cassandra:           %s" % (ver.check_cassandra())))
+    print (("Cobbler:             %s" % (ver.check_cobbler())))
 
 
 def set_include_path():
