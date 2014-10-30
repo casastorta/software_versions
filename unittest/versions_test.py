@@ -234,6 +234,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_cobbler()) \
         )
 
+    def test_riak(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_riak()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
