@@ -208,6 +208,10 @@ STABLE_COBBLER_PATTERN = \
     r'<div class="header">Latest Version:</div>.*?' \
     r'<div class="version">(.*?)</div>'
 
+STABLE_RIAK_URL = "http://docs.basho.com/riak/latest/downloads/"
+STABLE_RIAK_PATTERN = \
+    r'<div class="temp-banner-text">Riak (.*?) is now available.'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -250,5 +254,6 @@ __all__ = [
     "STABLE_OPENSMTPD_URL", "STABLE_OPENSMTPD_PATTERN",
     "STABLE_PHP_URL", "STABLE_PHP_PATTERN",
     "STABLE_CASSANDRA_URL", "STABLE_CASSANDRA_PATTERN",
-    "STABLE_COBBLER_URL", "STABLE_COBBLER_PATTERN"
+    "STABLE_COBBLER_URL", "STABLE_COBBLER_PATTERN",
+    "STABLE_RIAK_URL", "STABLE_RIAK_PATTERN"
 ]

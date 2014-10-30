@@ -57,6 +57,7 @@ def main():
     print (("PHP:                 %s" % (ver.check_php())))
     print (("Cassandra:           %s" % (ver.check_cassandra())))
     print (("Cobbler:             %s" % (ver.check_cobbler())))
+    print (("Riak:                %s" % (ver.check_riak())))
 
 
 def set_include_path():
