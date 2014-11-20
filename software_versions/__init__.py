@@ -212,6 +212,12 @@ STABLE_RIAK_URL = "http://docs.basho.com/riak/latest/downloads/"
 STABLE_RIAK_PATTERN = \
     r'<div class="temp-banner-text">Riak (.*?) is now available.'
 
+STABLE_PYTHON_URL = "https://www.python.org/downloads/"
+STABLE_PYTHON_PATTERN = \
+    r'<a class="button" ' \
+    r'href="https://www.python.org/ftp/python/.*?/Python-.*?">' \
+    r'Download Python (.*?)</a>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -255,5 +261,6 @@ __all__ = [
     "STABLE_PHP_URL", "STABLE_PHP_PATTERN",
     "STABLE_CASSANDRA_URL", "STABLE_CASSANDRA_PATTERN",
     "STABLE_COBBLER_URL", "STABLE_COBBLER_PATTERN",
-    "STABLE_RIAK_URL", "STABLE_RIAK_PATTERN"
+    "STABLE_RIAK_URL", "STABLE_RIAK_PATTERN",
+    "STABLE_PYTHON_URL", "STABLE_PYTHON_PATTERN"
 ]
