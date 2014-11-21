@@ -478,6 +478,16 @@ def check_python():
     return (__grep_out_info(url, pattern))
 
 
+def check_ruby():
+    '''
+    Checks Ruby stable version from the website
+    '''
+    url = sftw.STABLE_RUBY_URL
+    pattern = sftw.STABLE_RUBY_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False

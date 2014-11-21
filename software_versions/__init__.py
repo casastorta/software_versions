@@ -218,6 +218,11 @@ STABLE_PYTHON_PATTERN = \
     r'href="https://www.python.org/ftp/python/.*?/Python-.*?">' \
     r'Download Python (.*?)</a>'
 
+STABLE_RUBY_URL = "https://www.ruby-lang.org/en/downloads/"
+STABLE_RUBY_PATTERN = \
+    r'<a href="http://cache.ruby-lang.org/pub/ruby/.*?/ruby-.*?.tar.gz">' \
+    r'Ruby (.*?)</a>'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -262,5 +267,6 @@ __all__ = [
     "STABLE_CASSANDRA_URL", "STABLE_CASSANDRA_PATTERN",
     "STABLE_COBBLER_URL", "STABLE_COBBLER_PATTERN",
     "STABLE_RIAK_URL", "STABLE_RIAK_PATTERN",
-    "STABLE_PYTHON_URL", "STABLE_PYTHON_PATTERN"
+    "STABLE_PYTHON_URL", "STABLE_PYTHON_PATTERN",
+    "STABLE_RUBY_URL", "STABLE_RUBY_PATTERN"
 ]

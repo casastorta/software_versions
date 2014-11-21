@@ -59,6 +59,7 @@ def main():
     print (("Cobbler:             %s" % (ver.check_cobbler())))
     print (("Riak:                %s" % (ver.check_riak())))
     print (("Python:              %s" % (ver.check_python())))
+    print (("Ruby:                %s" % (ver.check_ruby())))
 
 
 def set_include_path():
