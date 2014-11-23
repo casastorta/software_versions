@@ -244,6 +244,11 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_python()) \
         )
 
+    def test_ruby(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_ruby()) \
+        )
+
     def __test_version(self, input_values=None):
 
         if (input_values):
