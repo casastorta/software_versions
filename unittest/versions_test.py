@@ -264,7 +264,7 @@ class TestVersionFunctions(unittest.TestCase):
                     except TypeError:
                         input_num = -1
                     except ValueError:
-                        if (len(input_part) < 5):
+                        if (len(input_part) < 7):
                             # If it's shorter than 4, it's probably
                             # something like 9.9.1-P3 or 1.3.4b
                             if (re.match('^[A-Za-z0-9_-]*$', input_part)):
