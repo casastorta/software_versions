@@ -223,6 +223,12 @@ STABLE_RUBY_PATTERN = \
     r'<a href="http://cache.ruby-lang.org/pub/ruby/.*?/ruby-.*?.tar.gz">' \
     r'Ruby (.*?)</a>'
 
+STABLE_LXC_URL = "https://linuxcontainers.org/lxc/downloads/"
+STABLE_LXC_PATTERN = \
+    r'Stable release tarballs are available for download below..*?' \
+    r'<a href="/downloads/lxc/lxc-.*?.tar.gz">.*?' \
+    r'lxc-(.*?).tar.gz'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -268,5 +274,6 @@ __all__ = [
     "STABLE_COBBLER_URL", "STABLE_COBBLER_PATTERN",
     "STABLE_RIAK_URL", "STABLE_RIAK_PATTERN",
     "STABLE_PYTHON_URL", "STABLE_PYTHON_PATTERN",
-    "STABLE_RUBY_URL", "STABLE_RUBY_PATTERN"
+    "STABLE_RUBY_URL", "STABLE_RUBY_PATTERN",
+    "STABLE_LXC_URL", "STABLE_LXC_PATTERN"
 ]

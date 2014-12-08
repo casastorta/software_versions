@@ -488,6 +488,16 @@ def check_ruby():
     return (__grep_out_info(url, pattern))
 
 
+def check_lxc():
+    '''
+    Checks LXC stable version from the website
+    '''
+    url = sftw.STABLE_LXC_URL
+    pattern = sftw.STABLE_LXC_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False

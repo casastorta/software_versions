@@ -60,6 +60,7 @@ def main():
     print (("Riak:                %s" % (ver.check_riak())))
     print (("Python:              %s" % (ver.check_python())))
     print (("Ruby:                %s" % (ver.check_ruby())))
+    print (("LXC:                 %s" % (ver.check_lxc())))
 
 
 def set_include_path():
