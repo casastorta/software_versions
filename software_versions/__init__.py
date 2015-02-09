@@ -141,8 +141,8 @@ STABLE_ROUNDCUBE_PATTERN = \
 
 STABLE_VAGRANT_URL = "http://www.vagrantup.com/downloads.html"
 STABLE_VAGRANT_PATTERN = \
-    r'<p> Below are all available downloads for the latest version of ' \
-    r'Vagrant \((.*?)\)'
+    r'<p>.*?Below are all available downloads for the latest version of ' \
+    r'Vagrant.*?\((.*?)\)'
 
 STABLE_HAPROXY_URL = "http://www.haproxy.org/#down"
 STABLE_HAPROXY_PATTERN = \
