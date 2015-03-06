@@ -118,7 +118,7 @@ STABLE_DOVECOT_PATTERN = \
 
 STABLE_MONGODB_URL = "http://www.mongodb.org/downloads"
 STABLE_MONGODB_PATTERN = \
-    r'<h2 class="release-version">Production Release \((.*?)\)'
+    r'<h2 class="release-version".*?>Production Release \((.*?)\)'
 
 STABLE_SPAMASSASSIN_URL = "http://spamassassin.apache.org/downloads.cgi"
 STABLE_SPAMASSASSIN_PATTERN = \
