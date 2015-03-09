@@ -81,7 +81,9 @@ STABLE_SENDMAILANALYZER_PATTERN = \
 
 STABLE_DJANGO_URL = "https://www.djangoproject.com/download/"
 STABLE_DJANGO_PATTERN = \
-    r'<p>The latest official version is (.*?).</p>'
+    r'<li>Latest release: <a href=".*?/download/.*?/tarball/">' \
+    r'Django-(.*?).tar.gz</a><br>Checksum: <a href=' \
+    r'".*?/download/.*?/checksum/">Django-.*?.checksum.txt</a></li>'
 
 STABLE_STUNNEL_URL = "https://www.stunnel.org/downloads.html"
 STABLE_STUNNEL_PATTERN = \
@@ -116,7 +118,7 @@ STABLE_DOVECOT_PATTERN = \
 
 STABLE_MONGODB_URL = "http://www.mongodb.org/downloads"
 STABLE_MONGODB_PATTERN = \
-    r'<h2 class="release-version">Production Release \((.*?)\)'
+    r'<h2 class="release-version".*?>Production Release \((.*?)\)'
 
 STABLE_SPAMASSASSIN_URL = "http://spamassassin.apache.org/downloads.cgi"
 STABLE_SPAMASSASSIN_PATTERN = \
@@ -139,8 +141,8 @@ STABLE_ROUNDCUBE_PATTERN = \
 
 STABLE_VAGRANT_URL = "http://www.vagrantup.com/downloads.html"
 STABLE_VAGRANT_PATTERN = \
-    r'<p> Below are all available downloads for the latest version of ' \
-    r'Vagrant \((.*?)\)'
+    r'<p>.*?Below are all available downloads for the latest version of ' \
+    r'Vagrant.*?\((.*?)\)'
 
 STABLE_HAPROXY_URL = "http://www.haproxy.org/#down"
 STABLE_HAPROXY_PATTERN = \
@@ -199,6 +201,36 @@ STABLE_PHP_PATTERN = \
     r"<span class='dot'>&middot;</span><a class='notes' " \
     r"href='/ChangeLog-5.php#.*?'>Release Notes</a></li>"
 
+STABLE_CASSANDRA_URL = "http://cassandra.apache.org"
+STABLE_CASSANDRA_PATTERN = \
+    r'Latest release <b>(.*?)</b>'
+
+STABLE_COBBLER_URL = "http://www.cobblerd.org/"
+STABLE_COBBLER_PATTERN = \
+    r'<div class="header">Latest Version:</div>.*?' \
+    r'<div class="version">(.*?)</div>'
+
+STABLE_RIAK_URL = "http://docs.basho.com/riak/latest/downloads/"
+STABLE_RIAK_PATTERN = \
+    r'<h1>Download Riak (.*?)</h1>'
+
+STABLE_PYTHON_URL = "https://www.python.org/downloads/"
+STABLE_PYTHON_PATTERN = \
+    r'<a class="button" ' \
+    r'href="https://www.python.org/ftp/python/.*?/Python-.*?">' \
+    r'Download Python (.*?)</a>'
+
+STABLE_RUBY_URL = "https://www.ruby-lang.org/en/downloads/"
+STABLE_RUBY_PATTERN = \
+    r'<a href="http://cache.ruby-lang.org/pub/ruby/.*?/ruby-.*?.tar.gz">' \
+    r'Ruby (.*?)</a>'
+
+STABLE_LXC_URL = "https://linuxcontainers.org/lxc/downloads/"
+STABLE_LXC_PATTERN = \
+    r'Stable release tarballs are available for download below..*?' \
+    r'<a href="/downloads/lxc/lxc-.*?.tar.gz">.*?' \
+    r'lxc-(.*?).tar.gz'
+
 __all__ = [
     "STABLE_SENDMAIL_URL", "STABLE_SENDMAIL_PATTERN",
     "STABLE_BIND_URL", "STABLE_BIND_PATTERN",
@@ -239,5 +271,11 @@ __all__ = [
     "STABLE_COUCHDB_URL", "STABLE_COUCHDB_PATTERN",
     "STABLE_OWNCLOUD_URL", "STABLE_OWNCLOUD_PATTERN",
     "STABLE_OPENSMTPD_URL", "STABLE_OPENSMTPD_PATTERN",
-    "STABLE_PHP_URL", "STABLE_PHP_PATTERN"
+    "STABLE_PHP_URL", "STABLE_PHP_PATTERN",
+    "STABLE_CASSANDRA_URL", "STABLE_CASSANDRA_PATTERN",
+    "STABLE_COBBLER_URL", "STABLE_COBBLER_PATTERN",
+    "STABLE_RIAK_URL", "STABLE_RIAK_PATTERN",
+    "STABLE_PYTHON_URL", "STABLE_PYTHON_PATTERN",
+    "STABLE_RUBY_URL", "STABLE_RUBY_PATTERN",
+    "STABLE_LXC_URL", "STABLE_LXC_PATTERN"
 ]

@@ -55,6 +55,12 @@ def main():
     print (("ownCloud:            %s" % (ver.check_owncloud())))
     print (("OpenSMTPD:           %s" % (ver.check_opensmtpd())))
     print (("PHP:                 %s" % (ver.check_php())))
+    print (("Cassandra:           %s" % (ver.check_cassandra())))
+    print (("Cobbler:             %s" % (ver.check_cobbler())))
+    print (("Riak:                %s" % (ver.check_riak())))
+    print (("Python:              %s" % (ver.check_python())))
+    print (("Ruby:                %s" % (ver.check_ruby())))
+    print (("LXC:                 %s" % (ver.check_lxc())))
 
 
 def set_include_path():

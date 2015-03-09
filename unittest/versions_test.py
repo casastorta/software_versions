@@ -224,13 +224,43 @@ class TestVersionFunctions(unittest.TestCase):
             self.__test_version(ver.check_php()) \
         )
 
+    def test_cassandra(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_cassandra()) \
+        )
+
+    def test_cobbler(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_cobbler()) \
+        )
+
+    def test_riak(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_riak()) \
+        )
+
+    def test_python(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_python()) \
+        )
+
+    def test_ruby(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_ruby()) \
+        )
+
+    def test_lxc(self):
+        self.assertTrue( \
+            self.__test_version(ver.check_lxc()) \
+        )
+
     def __test_version(self, input_values=None):
 
-        if (input_values):
+        if input_values:
             for value in input_values:
                 input_parts = value.split('.')
-                if (len(input_parts) <= 1 or len(input_parts) >= 5):
-                    return(False)
+                if len(input_parts) <= 1 or len(input_parts) >= 5:
+                    return False
 
                 for input_part in input_parts:
                     input_num = 0
@@ -239,10 +269,10 @@ class TestVersionFunctions(unittest.TestCase):
                     except TypeError:
                         input_num = -1
                     except ValueError:
-                        if (len(input_part) < 5):
+                        if len(input_part) < 7:
                             # If it's shorter than 4, it's probably
                             # something like 9.9.1-P3 or 1.3.4b
-                            if (re.match('^[A-Za-z0-9_-]*$', input_part)):
+                            if re.match('^[A-Za-z0-9_-]*$', input_part):
                                 sys.stdout.write(
                                     ("\n\t"
                                         "Version (%s from %s) seems to "
@@ -254,7 +284,7 @@ class TestVersionFunctions(unittest.TestCase):
                                 input_num = 0
                             else:
                                 input_num = -1
-                        elif (input_part.find('-ESV-') > -1):
+                        elif input_part.find('-ESV-') > -1:
                             # BIND extended support versions
                             sys.stdout.write(
                                 ("\n\t"
@@ -278,9 +308,9 @@ class TestVersionFunctions(unittest.TestCase):
                          "than 999" % (input_part, value))
                     )
 
-            return(True)
+            return True
 
-        return(False)
+        return False
 
 
 def set_include_path():

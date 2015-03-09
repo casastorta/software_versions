@@ -438,6 +438,66 @@ def check_php():
     return (__grep_out_info(url, pattern))
 
 
+def check_cassandra():
+    '''
+    Checks Cassandra stable version from the website
+    '''
+    url = sftw.STABLE_CASSANDRA_URL
+    pattern = sftw.STABLE_CASSANDRA_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_cobbler():
+    '''
+    Checks Cobbler stable version from the website
+    '''
+    url = sftw.STABLE_COBBLER_URL
+    pattern = sftw.STABLE_COBBLER_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_riak():
+    '''
+    Checks Riak stable version from the website
+    '''
+    url = sftw.STABLE_RIAK_URL
+    pattern = sftw.STABLE_RIAK_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_python():
+    '''
+    Checks Python stable version from the website
+    '''
+    url = sftw.STABLE_PYTHON_URL
+    pattern = sftw.STABLE_PYTHON_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_ruby():
+    '''
+    Checks Ruby stable version from the website
+    '''
+    url = sftw.STABLE_RUBY_URL
+    pattern = sftw.STABLE_RUBY_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
+def check_lxc():
+    '''
+    Checks LXC stable version from the website
+    '''
+    url = sftw.STABLE_LXC_URL
+    pattern = sftw.STABLE_LXC_PATTERN
+
+    return (__grep_out_info(url, pattern))
+
+
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
     only_first=False, greedy=False
