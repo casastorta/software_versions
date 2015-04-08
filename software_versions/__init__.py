@@ -165,10 +165,10 @@ STABLE_BACULA_PATTERN = \
     r'<a href="/projects/bacula/files/latest/download\?source=files" ' \
     r'title="/bacula/.*?/bacula-(.*?).tar.gz'
 
-STABLE_REDIS_URL = "http://redis.io/download"
+STABLE_REDIS_URL = "http://redis.io/"
 STABLE_REDIS_PATTERN = \
-    r'<td>(.*?)</td>.*?' \
-    r'<td>Stable</td>'
+    r'<a href=\'http://download.redis.io/releases/redis-.*?.tar.gz\'>' \
+    r'Redis (.*?) is the latest stable version.</a>'
 
 STABLE_UNBOUND_URL = "http://unbound.net/download.html"
 STABLE_UNBOUND_PATTERN = \
