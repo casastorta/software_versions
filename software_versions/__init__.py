@@ -81,9 +81,8 @@ STABLE_SENDMAILANALYZER_PATTERN = \
 
 STABLE_DJANGO_URL = "https://www.djangoproject.com/download/"
 STABLE_DJANGO_PATTERN = \
-    r'<li>Latest release: <a href=".*?/download/.*?/tarball/">' \
-    r'Django-(.*?).tar.gz</a><br>Checksum: <a href=' \
-    r'".*?/download/.*?/checksum/">Django-.*?.checksum.txt</a></li>'
+    r'<li>Latest release:.*?<a href=".*?/download/.*?/tarball/">.*?' \
+    r'Django-(.*?).tar.gz</a><br>'
 
 STABLE_STUNNEL_URL = "https://www.stunnel.org/downloads.html"
 STABLE_STUNNEL_PATTERN = \
