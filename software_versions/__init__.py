@@ -95,7 +95,7 @@ STABLE_POUND_PATTERN = \
 STABLE_LINUX_URL = "http://www.kernel.org/"
 STABLE_LINUX_PATTERN = \
     r'<td id="latest_link">.*?' \
-    r'<a href="./pub/linux/kernel/v3.x/linux-.*?.tar.xz">(.*?)</a>'
+    r'<a href="./pub/linux/kernel/v4.x/linux-.*?.tar.xz">(.*?)</a>'
 
 STABLE_VARNISH_URL = "https://www.varnish-cache.org/releases"
 STABLE_VARNISH_PATTERN = \
