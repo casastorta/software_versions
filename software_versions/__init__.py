@@ -92,10 +92,10 @@ STABLE_POUND_URL = "http://www.apsis.ch/pound/"
 STABLE_POUND_PATTERN = \
     r'Download the latest version <a .*?>Pound-(.*?).tgz</a>'
 
-STABLE_LINUX_URL = "http://www.kernel.org/"
+STABLE_LINUX_URL = "https://www.kernel.org/"
 STABLE_LINUX_PATTERN = \
     r'<td id="latest_link">.*?' \
-    r'<a href="./pub/linux/kernel/v4.x/linux-.*?.tar.xz">(.*?)</a>'
+    r'<a href=".*?/pub/linux/kernel/v4.x/linux-.*?.tar.xz">(.*?)</a>'
 
 STABLE_VARNISH_URL = "https://www.varnish-cache.org/releases"
 STABLE_VARNISH_PATTERN = \
