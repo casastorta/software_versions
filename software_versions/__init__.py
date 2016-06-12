@@ -22,7 +22,7 @@ STABLE_DHCP_PATTERN = \
 
 STABLE_CYRUS_IMAP_URL = "http://www.cyrusimap.org/"
 STABLE_CYRUS_IMAP_PATTERN = \
-    r'<p>Version: (.*?)</p>'
+    r'<p>The latest stable version of Cyrus IMAP is (.*?).</p>'
 
 STABLE_APACHE_URL = "http://httpd.apache.org/download.cgi"
 STABLE_APACHE_PATTERN = \
