@@ -68,7 +68,7 @@ STABLE_MYSQL_PATTERN = \
 
 STABLE_PROFTPD_URL = "http://www.proftpd.org/"
 STABLE_PROFTPD_PATTERN = \
-    r'Stable: <strong>(.*?)</strong>'
+    r'Maintenance: <strong>(.*?)</strong>'
 
 STABLE_VSFTPD_URL = "https://security.appspot.com/vsftpd.html"
 STABLE_VSFTPD_PATTERN = \
