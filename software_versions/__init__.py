@@ -125,11 +125,10 @@ STABLE_SPAMASSASSIN_PATTERN = \
     r'<a name="Released_version_relversion" id="Released_version_relversion"' \
     r'><h3>Released version, (.*?)</h3>'
 
-STABLE_CONSUL_URL = "http://www.consul.io/downloads.html"
+STABLE_CONSUL_URL = "https://www.consul.io/downloads.html"
 STABLE_CONSUL_PATTERN = \
-    r'<h2 class="os-name">Linux</h2>.*?' \
-    r'<li><a href="https://dl.bintray.com/mitchellh/consul/' \
-    r'(.*?)_linux_386.zip">32-bit</a></li>'
+    r'<p>.*?Below are the available downloads for the latest version of ' \
+    r'Consul.*?\((.*?)\)'
 
 STABLE_MIMEDEFANG_URL = "http://www.mimedefang.org/"
 STABLE_MIMEDEFANG_PATTERN = \
