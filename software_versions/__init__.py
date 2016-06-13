@@ -202,7 +202,7 @@ STABLE_PHP_PATTERN = \
 
 STABLE_CASSANDRA_URL = "http://cassandra.apache.org"
 STABLE_CASSANDRA_PATTERN = \
-    r'Latest release <b>(.*?)</b>'
+    r'>Tick-Tock</a> release <b>(.*?)</b>'
 
 STABLE_COBBLER_URL = "http://www.cobblerd.org/"
 STABLE_COBBLER_PATTERN = \
