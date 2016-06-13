@@ -192,7 +192,7 @@ STABLE_OWNCLOUD_PATTERN = \
 
 STABLE_OPENSMTPD_URL = "https://opensmtpd.org/"
 STABLE_OPENSMTPD_PATTERN = \
-    r'<a href="/announces/release-.*?.txt">OpenSMTPD (.*?)</a> released'
+    r'<a href="announces/release-.*?.txt">OpenSMTPD (.*?)</a> released'
 
 STABLE_PHP_URL = "http://php.net/"
 STABLE_PHP_PATTERN = \
