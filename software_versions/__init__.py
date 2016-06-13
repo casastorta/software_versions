@@ -204,7 +204,7 @@ STABLE_CASSANDRA_URL = "http://cassandra.apache.org"
 STABLE_CASSANDRA_PATTERN = \
     r'>Tick-Tock</a> release <b>(.*?)</b>'
 
-STABLE_COBBLER_URL = "http://www.cobblerd.org/"
+STABLE_COBBLER_URL = "https://cobbler.github.io/"
 STABLE_COBBLER_PATTERN = \
     r'<div class="header">Latest Version:</div>.*?' \
     r'<div class="version">(.*?)</div>'
