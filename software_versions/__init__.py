@@ -175,10 +175,10 @@ STABLE_UNBOUND_PATTERN = \
     r'<h2>Unbound Downloads</h2>.*?' \
     r'The latest version of unbound \(currently (.*?)\)'
 
-STABLE_SOGO_URL = "http://www.sogo.nu/downloads/backend.html"
+STABLE_SOGO_URL = "https://sogo.nu/download.html#/backend"
 STABLE_SOGO_PATTERN = \
-    r'<h2>Source Code</h2>.*?' \
-    r'id="downbutton">.*?SOGo-(.*?).tar.gz</a><br/>'
+    r'<i class="ui left floated big download icon".*?' \
+    r'<div class="header">Version (.*?)</div>'
 
 STABLE_COUCHDB_URL = "http://couchdb.apache.org/"
 STABLE_COUCHDB_PATTERN = \
