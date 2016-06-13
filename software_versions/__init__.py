@@ -138,9 +138,9 @@ STABLE_ROUNDCUBE_URL = "https://roundcube.net/download/"
 STABLE_ROUNDCUBE_PATTERN = \
     r'<td class="dlversion"><strong>(.*?)</strong> - Complete</td>'
 
-STABLE_VAGRANT_URL = "http://www.vagrantup.com/downloads.html"
+STABLE_VAGRANT_URL = "https://www.vagrantup.com/downloads.html"
 STABLE_VAGRANT_PATTERN = \
-    r'<p>.*?Below are all available downloads for the latest version of ' \
+    r'<p>.*?Below are the available downloads for the latest version of ' \
     r'Vagrant.*?\((.*?)\)'
 
 STABLE_HAPROXY_URL = "http://www.haproxy.org/#down"
