@@ -198,7 +198,7 @@ STABLE_PHP_URL = "http://php.net/"
 STABLE_PHP_PATTERN = \
     r"<li><a class='download-link' href='/downloads.php#v.*?'>(.*?)</a>" \
     r"<span class='dot'>&middot;</span><a class='notes' " \
-    r"href='/ChangeLog-5.php#.*?'>Release Notes</a></li>"
+    r"href='/ChangeLog-.*?.php#.*?'>Release Notes</a>"
 
 STABLE_CASSANDRA_URL = "http://cassandra.apache.org"
 STABLE_CASSANDRA_PATTERN = \
