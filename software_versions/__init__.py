@@ -97,10 +97,10 @@ STABLE_LINUX_PATTERN = \
     r'<td id="latest_link">.*?' \
     r'<a href=".*?/pub/linux/kernel/v4.x/linux-.*?.tar.xz">(.*?)</a>'
 
-STABLE_VARNISH_URL = "https://www.varnish-cache.org/releases"
+STABLE_VARNISH_URL = "https://www.varnish-cache.org/releases/index.html"
 STABLE_VARNISH_PATTERN = \
-    r'<h2 class="pane-title">Current supported releases</h2>.*?' \
-    r'<a href="/content/varnish-cache-.*?">Varnish Cache (.*?)</a>'
+    r'<a class="reference internal" href="rel.*?.html#rel.*?">' \
+    r'<span>Varnish Cache (.*?)</span>.*?<td>Supported</td>'
 
 STABLE_CLAMAV_URL = "http://www.clamav.net/download.html"
 STABLE_CLAMAV_PATTERN = \
