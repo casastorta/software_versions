@@ -115,10 +115,10 @@ STABLE_DOVECOT_PATTERN = \
     r'<h3>Stable releases</h3>.*?' \
     r'Download <a href="releases/.*?/dovecot-(.*?).tar.gz">'
 
-STABLE_MONGODB_URL = "http://www.mongodb.org/downloads"
+STABLE_MONGODB_URL = "https://www.mongodb.com/download-center#community"
 STABLE_MONGODB_PATTERN = \
-    r'<h2 class="release-version" data-production-version=".*?" ' \
-    r'data-targeted-builds="True">Current Stable Release \((.*?)\)</h2>'
+    r'<div class="downloads-current-release".*?>' \
+    r'<span.*?>Current Stable Release \((.*?)\)</span></div>'
 
 STABLE_SPAMASSASSIN_URL = "http://spamassassin.apache.org/downloads.cgi"
 STABLE_SPAMASSASSIN_PATTERN = \
