@@ -187,8 +187,8 @@ STABLE_COUCHDB_PATTERN = \
 
 STABLE_OWNCLOUD_URL = "https://owncloud.org/install/"
 STABLE_OWNCLOUD_PATTERN = \
-    r'<p>Latest stable version:.*?<span class="label label-success">' \
-    r'(.*?)</span>'
+    r'<div class="overlay-header row">.*?' \
+    r'<p>Latest stable version:.*?<span class="label.*?">(.*?)</span>'
 
 STABLE_OPENSMTPD_URL = "https://opensmtpd.org/"
 STABLE_OPENSMTPD_PATTERN = \
