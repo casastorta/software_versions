@@ -211,7 +211,7 @@ STABLE_COBBLER_PATTERN = \
 
 STABLE_RIAK_URL = "http://docs.basho.com/riak/latest/downloads/"
 STABLE_RIAK_PATTERN = \
-    r'<h1>Download Riak (.*?)</h1>'
+    r'<title>Download for Riak KV (.*?)</title>'
 
 STABLE_PYTHON_URL = "https://www.python.org/downloads/"
 STABLE_PYTHON_PATTERN = \
