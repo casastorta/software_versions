@@ -134,9 +134,9 @@ STABLE_MIMEDEFANG_URL = "http://www.mimedefang.org/"
 STABLE_MIMEDEFANG_PATTERN = \
     r'<span class="field-content">Release (.*?)</span>'
 
-STABLE_ROUNDCUBE_URL = "http://roundcube.net/download/"
+STABLE_ROUNDCUBE_URL = "https://roundcube.net/download/"
 STABLE_ROUNDCUBE_PATTERN = \
-    r'<td class="dlversion"><strong>Complete</Strong>: (.*?)</td>'
+    r'<td class="dlversion"><strong>(.*?)</strong> - Complete</td>'
 
 STABLE_VAGRANT_URL = "http://www.vagrantup.com/downloads.html"
 STABLE_VAGRANT_PATTERN = \
