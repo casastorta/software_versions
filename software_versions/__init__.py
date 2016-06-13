@@ -221,7 +221,7 @@ STABLE_PYTHON_PATTERN = \
 
 STABLE_RUBY_URL = "https://www.ruby-lang.org/en/downloads/"
 STABLE_RUBY_PATTERN = \
-    r'<a href="http://cache.ruby-lang.org/pub/ruby/.*?/ruby-.*?.tar.gz">' \
+    r'<a href="https://cache.ruby-lang.org/pub/ruby/.*?/ruby-.*?.tar.gz">' \
     r'Ruby (.*?)</a>'
 
 STABLE_LXC_URL = "https://linuxcontainers.org/lxc/downloads/"
