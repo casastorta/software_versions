@@ -5,6 +5,9 @@
 latest software versions from respective vendors' web sites.
 '''
 
+FAKE_USER_AGENT_STRING = \
+    'Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0'
+
 STABLE_SENDMAIL_URL = "http://www.sendmail.com/sm/open_source/download/"
 STABLE_SENDMAIL_PATTERN = \
     r'Sendmail.*<a href="/sm/open_source/download/.*">(.*)</a> is ' \
@@ -104,7 +107,7 @@ STABLE_VARNISH_PATTERN = \
 
 STABLE_CLAMAV_URL = "http://www.clamav.net/download.html"
 STABLE_CLAMAV_PATTERN = \
-    r'<h3>The latest stable release is <strong>(.*?)</strong></h3>'
+    r'<h3>The latest stable release is.*?<strong>(.*?) </strong></h3>'
 
 STABLE_OPENSSH_URL = "http://www.openssh.com/"
 STABLE_OPENSSH_PATTERN = \
@@ -136,7 +139,10 @@ STABLE_MIMEDEFANG_PATTERN = \
 
 STABLE_ROUNDCUBE_URL = "https://roundcube.net/download/"
 STABLE_ROUNDCUBE_PATTERN = \
-    r'<td class="dlversion"><strong>(.*?)</strong> - Complete</td>'
+        r'<td class="dlversion"><strong>.*?</strong> - Complete</td>' \
+        r'.*?<td class="dlbutton"><a href=' \
+        r'"https://github.com/roundcube/roundcubemail/releases/download/' \
+        r'.*?/roundcubemail-(.*?)-complete.tar.gz" title="Download now!">'
 
 STABLE_VAGRANT_URL = "https://www.vagrantup.com/downloads.html"
 STABLE_VAGRANT_PATTERN = \

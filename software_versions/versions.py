@@ -245,7 +245,7 @@ def check_clamav():
     url = sftw.STABLE_CLAMAV_URL
     pattern = sftw.STABLE_CLAMAV_PATTERN
 
-    return (__grep_out_info(url, pattern))
+    return (__grep_out_info(url, pattern, fake_user_agent=True))
 
 
 def check_openssh():
@@ -315,7 +315,8 @@ def check_roundcube():
     url = sftw.STABLE_ROUNDCUBE_URL
     pattern = sftw.STABLE_ROUNDCUBE_PATTERN
 
-    return (__grep_out_info(url, pattern, only_first=True))
+    return (__grep_out_info(url, pattern, only_first=True,
+            fake_user_agent=True))
 
 
 def check_vagrant():
@@ -500,7 +501,7 @@ def check_lxc():
 
 def __grep_out_info(
     url, pattern, match_number=1, recursive=False, multiline=False,
-    only_first=False, greedy=False
+    only_first=False, greedy=False, fake_user_agent=False
 ):
     '''
     Does the pull-and-grep part in search for requested info
@@ -508,10 +509,24 @@ def __grep_out_info(
     content = ''
 
     try:
-        f = client.urlopen(url)
-        content = f.read()
+        if fake_user_agent is True:
+            if dopy2 is True:
+                class AppURLopener(client.FancyURLopener):
+                    version = sftw.FAKE_USER_AGENT_STRING
+                client._urlopener = AppURLopener()
+                f = client.urlopen(url)
+                content = f.read()
+            elif dopy2 is False:
+                req = client.Request(
+                        url, data=None,
+                        headers={'User-Agent': sftw.FAKE_USER_AGENT_STRING})
+                f = client.urlopen(req)
+                content = f.read()
+        else:
+            f = client.urlopen(url)
+            content = f.read()
         if dopy2 is False:
-            content = content.decode("utf-8")
+            content = content.decode("latin-1")
         f.close()
     except:
         print (("***ERR*** Can't pull %s for software version: %s"

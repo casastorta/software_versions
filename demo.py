@@ -42,7 +42,7 @@ def main():
     print (("SpamAssassin:        %s" % (ver.check_spamassassin())))
     print (("Consul:              %s" % (ver.check_consul())))
     print (("MIMEDefang:          %s" % (ver.check_mimedefang())))
-    #print (("Roundcube:           %s" % (ver.check_roundcube())))
+    print (("Roundcube:           %s" % (ver.check_roundcube())))
     print (("Vagrant:             %s" % (ver.check_vagrant())))
     print (("HAProxy:             %s" % (ver.check_haproxy())))
     print (("Monit:               %s" % (ver.check_monit())))
