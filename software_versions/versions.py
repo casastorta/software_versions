@@ -515,16 +515,14 @@ def __grep_out_info(
                     version = sftw.FAKE_USER_AGENT_STRING
                 client._urlopener = AppURLopener()
                 f = client.urlopen(url)
-                content = f.read()
             elif dopy2 is False:
                 req = client.Request(
                         url, data=None,
                         headers={'User-Agent': sftw.FAKE_USER_AGENT_STRING})
                 f = client.urlopen(req)
-                content = f.read()
         else:
             f = client.urlopen(url)
-            content = f.read()
+        content = f.read()
         if dopy2 is False:
             content = content.decode("latin-1")
         f.close()
