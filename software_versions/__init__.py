@@ -164,12 +164,10 @@ STABLE_WORDPRESS_PATTERN = \
     r'<p class="intro">The latest stable release of WordPress ' \
     r'\(Version (.*?)\)'
 
-STABLE_BACULA_URL = "https://sourceforge.net/projects/bacula/files/bacula/"
+STABLE_BACULA_URL = "http://blog.bacula.org/category/releases/"
 STABLE_BACULA_PATTERN = \
-    r'<div class="download-bar">Looking for the latest ' \
-    r'version\? <strong>.*?' \
-    r'<a href="/projects/bacula/files/latest/download\?source=files" ' \
-    r'title="/bacula/.*?/bacula-(.*?).tar.gz'
+    r'<div class="colPost post">' \
+    r'.*?<h1>Release (.*?)</h1>'
 
 STABLE_REDIS_URL = "http://redis.io/"
 STABLE_REDIS_PATTERN = \

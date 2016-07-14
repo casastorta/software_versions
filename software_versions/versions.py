@@ -366,7 +366,7 @@ def check_bacula():
     url = sftw.STABLE_BACULA_URL
     pattern = sftw.STABLE_BACULA_PATTERN
 
-    return (__grep_out_info(url, pattern))
+    return (__grep_out_info(url, pattern, only_first=True))
 
 
 def check_redis():
