@@ -89,7 +89,7 @@ STABLE_DJANGO_PATTERN = \
 
 STABLE_STUNNEL_URL = "https://www.stunnel.org/downloads.html"
 STABLE_STUNNEL_PATTERN = \
-    r'<td><a href="downloads/stunnel-.*?.tar.gz">stunnel-(.*?).tar.gz</a></td>'
+    r'<a href="downloads/stunnel-.*?.tar.gz">stunnel-(.*?).tar.gz</a></td>'
 
 STABLE_POUND_URL = "http://www.apsis.ch/pound/"
 STABLE_POUND_PATTERN = \
