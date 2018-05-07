@@ -154,7 +154,7 @@ STABLE_HAPROXY_PATTERN = \
     r'<td>.*?-stable</td>.*?' \
     r'<td><a href="/download/.*?/src/haproxy-.*?.tar.gz">(.*?)</a></td>'
 
-STABLE_MONIT_URL = "http://mmonit.com/monit/#download"
+STABLE_MONIT_URL = "https://mmonit.com/monit/"
 STABLE_MONIT_PATTERN = \
     r'<div class="col-sm-8 col-sm-offset-2">.*?' \
     r'<h3>Monit (.*?) Downloads</h3>'
