@@ -102,8 +102,8 @@ STABLE_LINUX_PATTERN = \
 
 STABLE_VARNISH_URL = "https://www.varnish-cache.org/releases/index.html"
 STABLE_VARNISH_PATTERN = \
-    r'<a class="reference internal" href="rel.*?.html#rel.*?">' \
-    r'<span>Varnish Cache (.*?)</span>.*?<td>Supported</td>'
+    r'<span.*>Varnish Cache (.*?)</span>.*' \
+    r'td>Fresh</td>'
 
 STABLE_CLAMAV_URL = "http://www.clamav.net/download.html"
 STABLE_CLAMAV_PATTERN = \
