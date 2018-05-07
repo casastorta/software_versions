@@ -79,7 +79,8 @@ STABLE_VSFTPD_PATTERN = \
 STABLE_SENDMAILANALYZER_URL = \
     "http://sourceforge.net/projects/sa-report/files/"
 STABLE_SENDMAILANALYZER_PATTERN = \
-    r'<span>Download sendmailanalyzer-(.*?).tar.gz '
+    r'<span class="label">Download Latest Version</span>.*' \
+    r'<span class="sub-label">sendmailanalyzer-(.*?).tar.gz \('
 
 STABLE_DJANGO_URL = "https://www.djangoproject.com/download/"
 STABLE_DJANGO_PATTERN = \
