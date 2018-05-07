@@ -8,10 +8,9 @@ latest software versions from respective vendors' web sites.
 FAKE_USER_AGENT_STRING = \
     'Mozilla/5.0 (Android 4.4; Tablet; rv:41.0) Gecko/41.0 Firefox/41.0'
 
-STABLE_SENDMAIL_URL = "http://www.sendmail.com/sm/open_source/download/"
+STABLE_SENDMAIL_URL = "https://www.proofpoint.com/us/open-source-email-solution"
 STABLE_SENDMAIL_PATTERN = \
-    r'Sendmail.*<a href="/sm/open_source/download/.*">(.*)</a> is ' \
-    r'available from'
+    r'<a href="ftp://ftp.sendmail.org/pub/sendmail/sendmail.(.*?).tar.gz">'
 
 STABLE_BIND_URL = \
     "https://www.isc.org/downloads/"
