@@ -149,7 +149,7 @@ STABLE_VAGRANT_PATTERN = \
     r'<p>.*?Below are the available downloads for the latest version of ' \
     r'Vagrant.*?\((.*?)\)'
 
-STABLE_HAPROXY_URL = "http://www.haproxy.org/#down"
+STABLE_HAPROXY_URL = "http://www.haproxy.org/"
 STABLE_HAPROXY_PATTERN = \
     r'<td>.*?-stable</td>.*?' \
     r'<td><a href="/download/.*?/src/haproxy-.*?.tar.gz">(.*?)</a></td>'
